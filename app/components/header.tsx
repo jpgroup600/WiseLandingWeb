@@ -17,21 +17,38 @@ export default function Header() {
           </h2>
 
 
-          <div className="top3-border-wrapper
-          md:mt-[10vh]
-          ">
-            <div className="top3-border-title school-font text-[#3a3d53] text-[1.5rem] font-[900]">왜 와루일까?</div>
-            <div className="top3-border w-full bg-[#000] rounded-[10px]
-          ">
-            <div className="top3-border-title nexonReg-font p-4 text-white text-[1.1rem] font-[900]">1. 마케팅,개발, 디자이너 , MD 따로 찾을 필요없는 <br></br>올인원 솔루션을 제공합니다</div>
+          <div className="top3-border-wrapper flex flex-col md:mt-[10vh]">
+    <div className="top3-border-title school-font text-[#3a3d53] text-[1.5rem] font-[900] mb-4">
+        왜 와루일까?
+    </div>
+    
+    <div className="top3-border flex flex-col w-full bg-black rounded-[10px]">
+        <div className="p-4 ">
+            <div className="nexonReg-font text-white text-[1.1rem] font-[900]">
+                1. 마케팅,개발, 디자이너 , MD 따로 찾을 필요없는<br/>
+                올인원 솔루션을 제공합니다
+            </div>
+        </div>
 
-            <div className="top3-border-title nexonReg-font p-4 text-white text-[1.1rem] font-[900]">2. 모든 팀원이 와루에서 활동하기 때문에 팀 협업이 쉬워집니다</div>
+        <div className="p-4  ">
+            <div className="nexonReg-font text-white text-[1.1rem] font-[900]">
+                2. 모든 팀원이 와루에서 활동하기 때문에 팀 협업이 쉬워집니다
+            </div>
+        </div>
 
-            <div className="top3-border-title nexonReg-font p-4 text-white text-[1.1rem] font-[900]">3. 대행사가 아닌 내 회사를 같이 키울 파트너 (밤에도 쉬지않고 일합니다 (*ㅡ*))</div>
+        <div className="p-4 ">
+            <div className="nexonReg-font text-white text-[1.1rem] font-[900]">
+                3. 대행사가 아닌 내 회사를 같이 키울 파트너 (밤에도 쉬지않고 일합니다 (*ㅡ*))
+            </div>
+        </div>
 
-            <div className="top3-border-title nexonReg-font p-4 text-white text-[1.1rem] font-[900]">4. 마케팅과 개발의 통합 솔루션, 불편함을 자동화로 해결합니다</div>
-          </div>
-          </div>
+        <div className="p-4">
+            <div className="nexonReg-font text-white text-[1.1rem] font-[900]">
+                4. 마케팅과 개발의 통합 솔루션, 불편함을 자동화로 해결합니다
+            </div>
+        </div>
+    </div>
+</div>
 
         </div>
         {/* form div */}
