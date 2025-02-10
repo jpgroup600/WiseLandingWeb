@@ -142,14 +142,14 @@ export default function Navbar() {
       {/* Desktop Dropdown */}
       {showDropdown && (
         <div 
-          className="absolute top-full left-0 w-full bg-white shadow-lg z-50"
+          className="absolute top-full left-0 w-full bg-white shadow-lg z-50 "
           onMouseEnter={() => setShowDropdown(true)}
           onMouseLeave={() => setShowDropdown(false)}
         >
           <div className="grid items-center px-80 grid-cols-4 gap-8 p-6 border-t-2 border-blue-100">
             {Object.entries(menuData).map(([key, value]) => (
-              <div key={key} className="space-y-4">
-                <div className="flex gap-2 items-center ">
+              <div key={key} className="space-y-4 border-r border-[#d6cbc9]">
+                <div className="flex gap-2 items-center  ">
                   <div className=" ">
                     {value.icon} {/* Displaying the icon here */}
                   </div>
