@@ -35,7 +35,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             alt="Profile Picture"
             width={150}
             height={150}
-            className="rounded-full border-4 border-gray-200" // Light border
+            className="rounded-full w-full h-full border-4 border-gray-200" // Light border
           />
           </div>
         </div>
@@ -50,7 +50,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
         </div>
 
         {/* Button - Blue when selected */}
-        <div className="flex  items-center  md:items-center border bg-blue-500 rounded-lg  md:mx-auto mx-9 w-[200px]   md:mb-4">
+        <div className="flex  items-center  md:items-center border bg-blue-500 rounded-lg  md:mx-auto  w-[200px]   md:mb-4">
           <button className={`md:px-6 justify-center items-center md:items-center flex w-full md:py-2 md:w-[200px] md:h-[50px] ${
             isSelected 
               ? "md:bg-blue-500 md:text-white" 
@@ -60,7 +60,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           } transition-all`}>
             보장 확인
           </button>
-          <HiChevronDown className="text-[40px] text-black  md:hidden  " />
+          <HiChevronDown className="text-[30px] text-black  md:hidden  " />
  
           
         </div>
