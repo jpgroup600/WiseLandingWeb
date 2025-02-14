@@ -32,13 +32,13 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
   };
 
   return (
-    <div className="flex w-full flex-col justify-center items-center mt-4 md:mt-8">
+    <div className="flex w-full flex-col justify-center items-center   md:mt-6">
       {/* Navigation Buttons */}
-      <div className="w-full md:border-b md:border-t md:border-black flex items-center md:justify-center justify-between">
+      <div className="w-full font-semibold  md:border-b md:border-t md:border-black flex items-center md:justify-center justify-between">
         <button
           onClick={() => setActivePage("related-products")}
-          className={`w-[120px] md:w-[366px] h-[70px] md:border border-black ${activePage === "related-products"
-              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border border-black ${activePage === "related-products"
+              ? "bg-white text-blue-900 border-b-8 md:border-b-8 border-blue-900"
               : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >
@@ -46,8 +46,8 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
         </button>
         <button
           onClick={() => setActivePage("details")}
-          className={`w-[120px] md:w-[366px] h-[70px] md:border border-black ${activePage === "details"
-              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border  border-black ${activePage === "details"
+              ? "bg-white text-blue-900 border-b-8 md:border-b-8 border-blue-900"
               : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >
@@ -55,8 +55,8 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
         </button>
         <button
           onClick={() => setActivePage("reviews")}
-          className={`w-[120px]  md:w-[366px] h-[70px] md:border border-black ${activePage === "reviews"
-              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+          className={`w-[123px]  md:w-[366px] h-[50px] md:h-[70px] md:border border-black ${activePage === "reviews"
+              ? "bg-white text-blue-900 border-b-8 md:border-b-8 border-blue-900"
               :"bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >

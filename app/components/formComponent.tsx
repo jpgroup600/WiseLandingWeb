@@ -40,12 +40,12 @@ const FormComponent = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="이름"
-                            className="mt-2 border-b text-gray-700 focus:border-blue-500 focus:outline-none "
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none "
                         />
                     </div>
 
                     {/* Gender Selection */}
-                    <div className="flex items-center w-[100px] h-[50px] mt-5 justify-center bg-white border-2 border-[#150f96] rounded-lg">
+                    <div className="flex items-center w-[100px] h-[50px] mt-3 justify-center bg-white border-2 border-[#150f96] rounded-lg">
                         <button
                             onClick={() => handleGenderSelect('male')}
                             className={`w-full h-full ${gender === 'male' ? 'bg-[#150f96] text-white' : 'bg-white text-[#150f96]'} rounded-l-lg`}
@@ -72,15 +72,16 @@ const FormComponent = () => {
                             onChange={handleBirthdayChange}
                             maxLength={6}
                             placeholder="예) 800101"
-                            className="mt-2 border-b text-gray-700 focus:border-blue-500 focus:outline-none"
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none"
                         />
                     </div>
 
                     {/* Phone Input */}
-                    <div className="flex items-center">
+                    <div className="flex  items-center">
                         <label htmlFor="Phone" className="text-black ml-3 font-extrabold">
                             핸드폰:
                         </label>
+                        
                         <input
                             type="text"
                             id="Phone"
@@ -88,7 +89,7 @@ const FormComponent = () => {
                             onChange={handlePhoneChange}
                             maxLength={11}
                             placeholder="(-없이 입력)"
-                            className="mt-2 border-b text-gray-700 focus:border-blue-500 focus:outline-none"
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none"
                         />
                     </div>
                 </div>

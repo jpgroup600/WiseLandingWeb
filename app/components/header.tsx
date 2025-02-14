@@ -34,7 +34,7 @@ const swiperData = [
 
 export default function Header() {
   return (
-    <div className="w-full h-auto flex flex-col md:flex-row md:px-[10px] md:mt-20 ">
+    <div className="w-full h-auto flex flex-col md:flex-row md:px-[9px] md:mt-20 ">
       {/* Text and Image */}
       <div className="md:w-[60%] md:px-[100px] w-full md:h-[750px] px-4  py-4">
         <div className="md:w-[700px] sm:w-[750px] w-full h-full ">
@@ -46,8 +46,8 @@ export default function Header() {
         </div>
 
         
-        <div className="top3-border-wrapper mt-10  flex flex-col ">
-          <div className="top3-border-title school-font text-[#3a3d53] text-[1.5rem] font-[900] mb-4">
+        <div className="top3-border-wrapper mt-5 px-3 flex flex-col ">
+          <div className="top3-border-title school-font text-[#3a3d53] text-[1.5rem] font-[800] ">
             왜 와루일까!
           </div>
           <Swiper
@@ -63,23 +63,23 @@ export default function Header() {
               clickable: true,
             }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper  p-2 bg-[#ebf3fe]  border  md:w-full rounded-2xl"
+            className="mySwiper   bg-[#ebf3fe]  border  md:w-full rounded-2xl"
             style={{ width: '100%', height: '100%' }}
           >
             {swiperData.map((data, index) => (
               <SwiperSlide key={index}>
-                <div className="top3-border  flex h-[200px] md:h-[300px] md:px-2 items-center justify-center md:w-full bg-[#ebf3fe] rounded-[10px]">
+                <div className="top3-border  flex h-[200px] md:h-[300px] md:px-3 items-center justify-center md:w-full bg-[#ebf3fe] rounded-[10px]">
                   <div className="flex flex-col w-3/4">
-                    <p className="nexonReg-font text-black text-[13px]  md:text-[1.5rem] space-y-4 font-[900]">
+                    <p className="nexonReg-font text-black text-[10px]  md:text-[1.5rem] space-y-4 font-[900]">
                       {data.text1}
                     </p>
-                    <p className="nexonReg-font text-[13px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
+                    <p className="nexonReg-font text-[10px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
                       {data.text2}
                     </p>
-                    <p className="nexonReg-font text-[13px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
+                    <p className="nexonReg-font text-[10px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
                       {data.text3}
                     </p>
-                    <p className="nexonReg-font text-[13px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
+                    <p className="nexonReg-font text-[10px]  text-black md:text-[1.5rem] space-y-4 font-[900]">
                       {data.text4}
                     </p>
                   </div>
@@ -97,7 +97,7 @@ export default function Header() {
             ))}
           </Swiper>
 
-          <div className="custom-pagination flex justify-center mt-6 space-x-2" />
+          <div className="custom-pagination flex justify-center mt-2 space-x-2" />
 
         </div>
       </div>

@@ -46,7 +46,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           <h2 className=" text-[13px]  md:text-[25px] font-semibold text-black md:text-gray-900">
             {name}({age})
           </h2>
-          <p className="text-gray-700 font-medium w-[190px]   md:w-[240px]  text-[12px]  md:text-[20px] ">{description}</p>
+          <p className="text-gray-700 font-medium w-[190px]   md:h-[130px]  md:w-[240px]  text-[12px]  md:text-[20px] ">{description}</p>
         </div>
 
         {/* Button - Blue when selected */}
@@ -57,7 +57,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
           } md:rounded-lg font-medium border-2 ${
             isSelected ? "border-[#150f96] " : "border-gray-200"
           } transition-all`}>
-          <button className=" justify-center items-center md:items-center flex w-full md:text-[28.5px] h-[10px] font-semibold text-white md:h-[60px]" >
+          <button className=" justify-center ml-5 items-center md:items-center flex w-full md:text-[28.5px] h-[10px] font-semibold text-white md:h-[60px]" >
             보장 확인
           </button>
           <HiChevronDown className="text-[35px] text-black  md:hidden  " />

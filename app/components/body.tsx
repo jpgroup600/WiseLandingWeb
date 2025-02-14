@@ -19,8 +19,8 @@ export default function Body() {
 
       {/* Recommendation Heading */}
       <div className="w-full flex items-center  md:mt-24 justify-center my- md:my-12">
-        <div className="w-full md:w-[80%] bg-blue-50 py-4  "> 
-          <h1 className="text-xl md:text-3xl font-bold text-blue-800 text-center">
+        <div className="w-full md:w-[80%] bg-[#f2f2f2] py-4  "> 
+          <h1 className="text-xl md:text-3xl font-bold text-[#11098a] text-center">
             이런 분들에게 추천합니다!
           </h1>
         </div>
