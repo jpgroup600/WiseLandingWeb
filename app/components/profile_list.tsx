@@ -93,12 +93,12 @@ const ProfileList: React.FC = () => {
   }, [selectedProfile]);
 
   return (
-    <div className="bg-white md:p-8"> {/* Force white background */}
-      <div className="flex flex-wrap gap-7 justify-center items-center">
+    <div className="md:p-8"> {/* Force white background */}
+      <div className="flex flex-wrap gap-1 md:gap-7 justify-center items-center">
         {profiles.map((profile, index) => (
           <div
             key={index}
-            className="w-full max-w-xs mb-6 cursor-pointer"
+            className="w-full md:max-w-xs md:mb-6 cursor-pointer"
             onClick={() => handleProfileClick(profile)} // When card is clicked
           >
             <ProfileCard

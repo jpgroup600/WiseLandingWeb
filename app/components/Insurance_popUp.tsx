@@ -25,7 +25,7 @@ export default function InsurancePopup(): JSX.Element | null {
         animate={{ x: 0 }}
         exit={{ x: 300 }}
         transition={{ delay: 0.5 }}
-        className="fixed right-0 top-20 w-[250px] p-0 bg-white shadow-lg border rounded-lg"
+        className="fixed right-0 bottom-36 w-[250px] p-0 bg-white shadow-lg border rounded-lg"
       >
         <Image
           src="/float.png"
@@ -41,13 +41,13 @@ export default function InsurancePopup(): JSX.Element | null {
             <li className='w-full  flex'>
               <button
                 onClick={() => setSelectedGender('남')}
-                className={`px-4 w-full py-3 text-[22px]  ${selectedGender === '남' ? 'bg-[#01C1D6] text-white' : 'bg-white'}`}
+                className={`px-4 w-full rounded-lg py-3 text-[22px]  ${selectedGender === '남' ? 'bg-[#01C1D6] text-white' : 'bg-white'}`}
               >
                 남
               </button>
               <button
                 onClick={() => setSelectedGender('여')}
-                className={`px-4 w-full py-3 text-[22px] ${selectedGender === '여' ? 'bg-[#01C1D6] text-white' : 'bg-white'}`}
+                className={`px-4 w-full py-3 rounded-lg text-[22px] ${selectedGender === '여' ? 'bg-[#01C1D6] text-white' : 'bg-white'}`}
               >
                 여
               </button>
@@ -77,7 +77,7 @@ export default function InsurancePopup(): JSX.Element | null {
         animate={{ x: 0 }}
         exit={{ x: 300 }}
         transition={{ delay: 0.5 }}
-        className="fixed  right-28  bottom-28 "
+        className="fixed  right-28  bottom-24 "
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <div className="  p-10   ">

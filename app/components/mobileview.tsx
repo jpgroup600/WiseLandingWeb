@@ -40,7 +40,7 @@ export default function Mobile_View({
 
       {/* Modal - Neeche Content Ko Push Karega */}
       {localIsOpen && (
-        <div className="relative w-full bg-white shadow-lg z-50 mt-2 p-4 rounded-lg border border-gray-200">
+        <div className="relative w-full bg-white shadow-lg z-50 mt-2  rounded-lg border border-gray-200">
           <Blog_Page_Navigation image={image} resetTrigger={resetTrigger} />
         </div>
       )}

@@ -41,22 +41,22 @@ export default function Model_Handel() {
   return (
     <div className="">
       {/* Fixed Buttons */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-4 z-50">
-        <div className="flex justify-center gap-4">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-2 z-50">
+        <div className="flex items-center justify-center  gap-3">
           <div>
             <FloatingButton />
           </div>
           <button
             onClick={() => openModel(2)}
-            className="px-6 py-3 bg-[#FFD400] text-black font-bold rounded-lg"
+            className=" h-[50px] w-[160px] bg-[#FFD400] text-black school-font font-extrabold text-[15px] rounded-xl"
           >
-            Button 2
+            가입 상담 신청{" "}
           </button>
           <button
             onClick={() => openModel(3)}
-            className="px-6 py-3 bg-[#FFD400] font-bold text-black rounded-lg"
+            className="h-[50px] w-[160px]  bg-[#FFD400]  school-font font-extrabold text-[15px] text-black rounded-xl"
           >
-            Button 3
+            보험료 확인{" "}
           </button>
         </div>
       </div>
@@ -73,15 +73,14 @@ export default function Model_Handel() {
               animate={{ y: 0 }}
               exit={{ y: "100%" }}
               transition={{ type: "spring", damping: 20, stiffness: 100 }}
-              className="w-full h-auto bg-white rounded-t-3xl overflow-y-auto"
+              className="w-full h-auto bg-white rounded-t-[30.35px] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-end mb-4">
                 <button
                   onClick={handleClose}
                   className="text-gray-500 hover:text-gray-700"
-                >
-                             </button>
+                ></button>
               </div>
               <div>
                 {activeModel === 2 && <Model2 onClose={handleClose} />}

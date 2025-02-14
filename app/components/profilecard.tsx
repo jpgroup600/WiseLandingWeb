@@ -17,50 +17,50 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
   isSelected 
 }) => {
   return (
-    <div className={`w-full  md:border-2 ${
-      isSelected ? "border-blue-500"  : "md:border-gray-200" // Light gray border
-    } md:rounded-lg md:shadow-lg flex content-center md:mt-5`}>
+    <div className={`w-full   ${
+      isSelected ? "border-[#150f96] border-4 "  : "border-gray-200 md:border-4" 
+    } md:rounded-2xl md:shadow-lg flex content-center `}>
       
-      <div className="md:w-[400px] w-full h-[200px] md:h-[550px] justify-center items-center flex flex-row md:flex-col">
+      <div className="md:w-[400px] w-full  h-[150px] md:h-[550px] justify-center gap-3 items-center flex flex-row  md:flex-col">
         {/* Title - Black text forced */}
        
         {/* Image with light gray border */}
-        <div className="flex justify-center  items-center md:mt-4 flex-col ">
-        <div className="text-[15px] font-sans  md:text-[35px] md:font-bold text-gray-900 items-center order-2 md:order-1 flex flex-col mt-2 ">
+        <div className="flex justify-center   md:gap-7  items-center flex-col  ">
+        <div className="text-[13px] font-sans  md:text-[35px] md:font-bold text-gray-900 items-center order-2 md:order-1 flex flex-col mt-2 ">
           {name}
         </div>
-    <div className='md:order-2  w-[100px] h-[100px] md:w-[150px] md:h-[150px] order-1'>
+    <div className='md:order-2  w-[60px] h-[60px] md:w-[150px] md:h-[150px] order-1'>
           <Image
             src={imageUrl}
             alt="Profile Picture"
             width={150}
             height={150}
-            className="rounded-full w-full h-full border-4 border-gray-200" // Light border
+            className="rounded-full border-4 border-gray-200" // Light border
           />
           </div>
         </div>
 
         {/* Info Section - Dark gray text */}
-        <div className=''>
-        <div className="md:text-center md:mt-8 md:mb-8">
-          <h2 className=" text-[15px] mx-9 md:text-[25px] font-semibold text-black md:text-gray-900">
+        <div className='px-2 flex flex-col gap-1.5 md:gap-6'>
+        <div className="md:text-center flex flex-col gap-1.5 md:gap-6 ">
+          <h2 className=" text-[13px]  md:text-[25px] font-semibold text-black md:text-gray-900">
             {name}({age})
           </h2>
-          <p className="text-gray-700 mx-10 text-[10px]  md:text-[20px] mt-2">{description}</p>
+          <p className="text-gray-700 font-medium w-[190px]   md:w-[240px]  text-[12px]  md:text-[20px] ">{description}</p>
         </div>
 
         {/* Button - Blue when selected */}
-        <div className="flex  items-center  md:items-center border bg-blue-500 rounded-lg  md:mx-auto  w-[200px]   md:mb-4">
-          <button className={`md:px-6 justify-center items-center md:items-center flex w-full md:py-2 md:w-[200px] md:h-[50px] ${
+        <div className={`flex items-center   md:items-center border   rounded-lg  md:mx-auto w-[190px]  md:w-[250px]  md:mb-4 ${
             isSelected 
-              ? "md:bg-blue-500 md:text-white" 
-              : "md:bg-gray-100 md:text-gray-700"
-          } md:rounded-lg font-medium md:border-2 ${
-            isSelected ? "md:border-blue-500" : "md:border-gray-200"
+              ? "bg-[#150f96]  text-white" 
+              : "bg-[#8f8f8f]  text-gray-700"
+          } md:rounded-lg font-medium border-2 ${
+            isSelected ? "border-[#150f96] " : "border-gray-200"
           } transition-all`}>
+          <button className=" justify-center items-center md:items-center flex w-full md:text-[28.5px] h-[10px] font-semibold text-white md:h-[60px]" >
             보장 확인
           </button>
-          <HiChevronDown className="text-[30px] text-black  md:hidden  " />
+          <HiChevronDown className="text-[35px] text-black  md:hidden  " />
  
           
         </div>

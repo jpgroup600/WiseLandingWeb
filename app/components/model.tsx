@@ -8,11 +8,11 @@ export default function SimpleFloatingModel() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="z-20">
+    <div className="z-20 ">
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-gray-400 rounded-2xl  flex items-center justify-center shadow-xl  transition-colors"
+        className=" h-[50px] w-[50px]  bg-gray-400 rounded-2xl  flex items-center justify-center shadow-xl  transition-colors"
       >
         {isOpen ? (
           <div className="text-black text-xl bg-gray-200 w-full h-full rounded-2xl   z-50 flex items-center justify-center">

@@ -37,27 +37,27 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
       <div className="w-full md:border-b md:border-t md:border-black flex items-center md:justify-center justify-between">
         <button
           onClick={() => setActivePage("related-products")}
-          className={`w-[366px] h-[70px] md:border border-black ${activePage === "related-products"
-              ? "bg-white text-blue-700 border-b-2 md:border-b-4 border-blue-700"
-              : "bg-white text-gray-700"
+          className={`w-[120px] md:w-[366px] h-[70px] md:border border-black ${activePage === "related-products"
+              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+              : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >
           상품특징
         </button>
         <button
           onClick={() => setActivePage("details")}
-          className={`w-[366px] h-[70px] md:border border-black ${activePage === "details"
-              ? "bg-white text-blue-700 border-b-2 md:border-b-4 border-blue-700"
-              : "bg-white text-gray-700"
+          className={`w-[120px] md:w-[366px] h-[70px] md:border border-black ${activePage === "details"
+              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+              : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >
           보장내역
         </button>
         <button
           onClick={() => setActivePage("reviews")}
-          className={`w-[366px] h-[70px] md:border border-black ${activePage === "reviews"
-              ? "bg-white text-blue-700 border-b-2 md:border-b-4 border-blue-700"
-              : "bg-white text-gray-700"
+          className={`w-[120px]  md:w-[366px] h-[70px] md:border border-black ${activePage === "reviews"
+              ? "bg-white text-blue-900 border-b-4 md:border-b-8 border-blue-900"
+              :"bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
         >
           가입안내

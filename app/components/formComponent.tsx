@@ -28,7 +28,7 @@ const FormComponent = () => {
         <div className="  items-center w-full h-full  flex flex-col">
             <div className="flex flex-col w-[1100px] h-[230px] justify-center items-center mx-auto  rounded-2xl bg-[#150f96] ">
                 {/* Form Inner Section */}
-                <div className="bg-white p-5 flex justify-items-center gap-3 w-[90%] h-[50%] ">
+                <div className="bg-white p-5 flex justify-items-center gap-3 w-[95%] h-[50%] ">
                     {/* Name Input */}
                     <div className="flex items-center">
                         <label htmlFor="name" className="text-black font-extrabold">
@@ -48,13 +48,13 @@ const FormComponent = () => {
                     <div className="flex items-center w-[100px] h-[50px] mt-5 justify-center bg-white border-2 border-[#150f96] rounded-lg">
                         <button
                             onClick={() => handleGenderSelect('male')}
-                            className={`w-full h-full ${gender === 'male' ? 'bg-[#150f96] text-white' : 'bg-white text-black'} rounded-l-lg`}
+                            className={`w-full h-full ${gender === 'male' ? 'bg-[#150f96] text-white' : 'bg-white text-[#150f96]'} rounded-l-lg`}
                         >
                             남
                         </button>
                         <button
                             onClick={() => handleGenderSelect('female')}
-                            className={`w-full h-full ${gender === 'female' ? 'bg-[#150f96] text-white' : 'bg-white text-black'} rounded-r-lg`}
+                            className={`w-full h-full ${gender === 'female' ? 'bg-[#150f96] text-white' : 'bg-white text-[#150f96]'} rounded-r-lg`}
                         >
                             여
                         </button>
@@ -94,14 +94,14 @@ const FormComponent = () => {
                 </div>
 
                 {/* Buttons Section */}
-                <div className="flex justify-between w-[90%]  gap-6  mt-3">
+                <div className="flex justify-center  w-full  gap-2  mt-3">
                     <button
-                        className="w-[40%] bg-gray-600  text-[18px]  text-white font-extrabold py-3  rounded-lg"
+                        className="w-[35%] bg-gray-600  text-[18px]  text-white font-extrabold py-3  rounded-lg"
                     >
                         상담신청
                     </button>
                     <button
-                        className="w-[55%] bg-yellow-400 text-[18px] text-black font-extrabold py-3 rounded-lg"
+                        className="w-[60%] bg-yellow-400 text-[18px] text-black font-extrabold py-3 rounded-lg"
                     >
                         보험료 계산
                     </button>

@@ -9,9 +9,9 @@ export default function Header_Form() {
   const [gender, setGender] = useState('남');
 
   return (
-    <div className=" mx-auto bg-white rounded-2xl shadow-lg border-2 border-blue-900">
-      <div className="mb-4 flex gap-6 px-6 mt-8">
-        <label className="block text-gray-700 w-[150px] text-xl font-bold mb-1">이름</label>
+    <div className=" mx-auto h-[447px] flex flex-col justify-between bg-white rounded-3xl shadow-lg border-2 border-blue-900">
+      <div className="mb-4 flex px-6 mt-8">
+        <label className="block text-gray-700 w-[110px] text-xl font-bold mb-1">이름</label>
         <input type="text" placeholder="이름" className="w-full border-b-2 focus:outline-none p-1" />
       </div>
       <div className="mb-4 flex gap-6 items-center px-6 mt-8">
@@ -33,17 +33,17 @@ export default function Header_Form() {
         </button>
       </div>
       </div>
-      <div className="mb-4 flex gap-6 px-6 mt-8 items-center">
-        <label className="block text-gray-700 w-[150px] font-bold mb-1">핸드폰</label>
+      <div className="mb-4 flex  px-6 mt-8 items-center">
+        <label className="block text-gray-700 w-[120px] font-bold mb-1">핸드폰</label>
         <input type="text" placeholder="(-없이 입력)" className="w-full border-b-2 focus:outline-none p-1 text-gray-400" />
       </div>
 
       
 
       {/* Action Buttons */}
-      <div className="flex justify-center mt-10 gap-2">
-        <button className="bg-gray-400 text-white py-4 text-xl rounded-lg flex items-center gap-1" onClick={() => alert("보험료 확인 버튼이 클릭되었습니다.")}>간편 상담신청<FaAngleRight className='text-[40px] bg-gray-500 rounded-l-full py-2'  /></button>
-        <button className="bg-[#FFD400] text-black py-4 rounded-lg flex items-center  justify-between gap-4 pl-2 text-xl font-bold " onClick={() => alert("간편 상담신청 버튼이 클릭되었습니다.")}>보험료 확인<FaAngleRight className='text-[40px] bg-yellow-500 text-white py-2 rounded-l-full w-[40px]' /></button>
+      <div className="flex justify-center mt-10 gap-3">
+        <button className="bg-gray-400 text-white text-[22px] rounded-lg flex items-center gap-1 w-[189px] h-[68px] justify-between " onClick={() => alert("보험료 확인 버튼이 클릭되었습니다.")}>간편 상담신청<FaAngleRight className='text-[40px] bg-gray-500 rounded-l-full py-2'  /></button>
+        <button className="bg-[#FFD400] text-black rounded-lg flex items-center  justify-between gap-4 w-[189px] h-[68px]   pl-2 text-[22px] font-bold " onClick={() => alert("간편 상담신청 버튼이 클릭되었습니다.")}>보험료 확인<FaAngleRight className='text-[40px] bg-yellow-500 text-white py-2 rounded-l-full w-[40px]' /></button>
       </div>
 
       {/* Contact Information */}
