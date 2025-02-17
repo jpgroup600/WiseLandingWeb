@@ -1,6 +1,5 @@
 "use client"
 import React, { useState } from 'react';
-import { FaPhoneAlt } from 'react-icons/fa';
 import { FaAngleRight } from "react-icons/fa6";
 
 

@@ -8,11 +8,6 @@ const FormComponent = () => {
     const [name, setName] = useState('');
     const [birthday, setBirthday] = useState('');
     const [phone, setPhone] = useState('');
-    const [gender, setGender] = useState<'male' | 'female'>('male');
-
-    const handleGenderSelect = (selectedGender: 'male' | 'female') => {
-        setGender(selectedGender);
-    };
 
     const handleBirthdayChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value.replace(/\D/g, '').slice(0, 6);

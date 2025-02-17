@@ -1,3 +1,4 @@
+// Remove if not used:
 interface CardDataInterface {
     title: string;
     description: string;

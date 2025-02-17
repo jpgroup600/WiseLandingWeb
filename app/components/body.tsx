@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ProfileList from "./profile_list/profile_list";
 
 export default function Body() {

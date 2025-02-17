@@ -11,12 +11,6 @@ export default function Related_Product(prop: RealtedTypes) {
   // Mock data arr  const products = prop.Product_data || []; // Default to empty array if no data is passed
   // const products = prop.product_data || []; // Default to empty array if no data is passed
 
-  const [even, setEven] = useState<boolean>(true);
-
-  useEffect(() => {
-    setEven(prop.product_dat.length % 2 === 0);
-  }, [prop.product_dat.length]);
-
   return (
     <div className="flex flex-col w-full h-full px-4  gap-2  mb-2 items-center justify-center">
       {/* Card Group 1 */}

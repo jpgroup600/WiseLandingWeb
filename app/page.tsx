@@ -2,7 +2,6 @@ import Header from "./components/header";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Body from "./components/body";
-import InsurancePopup from "./components/Insurance_popUp"; // Import your popup component
 import Model_Handel from "./components/model_handel";
 import FormComponent from "./components/formComponent";
 import { FaSquarePhone } from "react-icons/fa6";

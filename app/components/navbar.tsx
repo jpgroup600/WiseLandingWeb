@@ -2,8 +2,6 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaSquarePhone } from "react-icons/fa6";
-import { HiOutlineBars3 } from "react-icons/hi2";
-import { HiX } from "react-icons/hi";
 import { LuHeartCrack } from "react-icons/lu"; // Example icon
 import { LiaToothSolid } from "react-icons/lia"; // Example tooth icon
 import { LuBicepsFlexed } from "react-icons/lu";
