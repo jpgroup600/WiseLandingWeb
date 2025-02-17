@@ -1,31 +1,12 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import ProfileCard from "./profilecard";
-import Blog_Page_Navigation from "./blog_page_navigation";
-import Mobile_View from "./mobileview";
+import ProfileCard from "../profilecard";
+import Blog_Page_Navigation from "../blog_page_navigation";
+import Mobile_View from "../mobileview";
+import { cardData1, cardData2, cardData3, cardData4 } from "./data"
 
-const cardData = [
-  {
-    title: "업계최초로 보장",
-    description: "표적항암약물허가 치료비집중보장(특약)",
-    icon: "/d2.PNG", // Replace with actual image paths
-  },
-  {
-    title: "발생률 높은 암도 든든",
-    description: "유방암, 전립선암도 일반암과 동일하게 보장",
-    icon: "/d4.PNG", // Replace with actual image paths
-  },
-  {
-    title: "최신 항암치료도 든든(특약)",
-    description: "3세대 면역항암제 치료와 약물, 방사선치료도 보장",
-    icon: "/d2.PNG", // Replace with actual image paths
-  },
-  {
-    title: "생활자금 매월 지급(특약)",
-    description: "일상까지 안심할 수 있도록, 매월 최대 100만원 보장",
-    icon: "/d4.PNG", // Replace with actual image paths
-  },
-];
+
+
 interface Profile {
   name: string;
   age: string;
@@ -37,10 +18,15 @@ interface Profile {
 }
 
 
+
+
+
+
 const ProfileList: React.FC = () => {
   // State to track which profile is selected
   const [selectedProfile, setSelectedProfile] = useState<Profile | null>(null);
   const [resetTrigger, setResetTrigger] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
   const blogNavRef = useRef<HTMLDivElement>(null);
 
@@ -48,34 +34,44 @@ const ProfileList: React.FC = () => {
   const profiles: Profile[] = [
     {
       id: 1,
-      name: "강OO",
+      name: "마케팅",
       age: "남, 43세",
       description:
-        "나이들수록 치과 갈 일은 많은 데 매번 나가는 치료비가 부담입니다.",
+        "상품은 준비가 됬는데 <br> 고객한테 어떻게 알릴지가 <br>고민입니다.",
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 치료가 자주 필요하고 보험 가입을 고려하고 있습니다.",
-      image:cardData,
+      image:cardData1,
     },
     {
       id: 2,
-      name: "이OO",
+      name: "개발",
       age: "여, 30세",
-      description: "치료가 필요하지만 시간과 비용이 부담스러워 고민 중입니다.",
+      description: "아이디어는 있는데 <br >어떻게 구현할지 <br> 아직 잘모르겠어요",
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 시간과 비용을 절감할 방법을 찾고 있습니다.",
-      image:cardData,
+      image:cardData2,
     },
     {
-      id: 4,
-      name: "박OO",
+      id: 3,
+      name: "디자인/영상",
       age: "남, 50세",
-      description: "장기적인 치료비가 걱정되어 보험에 가입하고 싶습니다.",
+      description: "상품이 있는데 <br> 매력적이게 보이고 싶은데 <br> 어떻게 하면 좋을까요?",
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
-      image:cardData,
+      image:cardData3,
+    },
+    {
+      id: 4,
+      name: "쇼핑몰 운영",
+      age: "남, 50세",
+      description: "쇼핑몰 운영중에 있는데 <br> 관리할 사람이 없어서 <br> 고민이에요",
+      imageUrl: "/images/d2.png",
+      additionalInfo:
+        "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
+      image:cardData4,
     },
   ];
 
@@ -87,17 +83,27 @@ const ProfileList: React.FC = () => {
 
   // Scroll into view when a new profile is selected
   useEffect(() => {
+    // check if its mobile or pc
+    if (window.innerWidth < 768) {
+      setIsMobile(true);
+    }
+
     if (selectedProfile && blogNavRef.current) {
       blogNavRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [selectedProfile]);
 
   return (
-    <div className="md:p-8"> {/* Force white background */}
-      <div className="flex flex-wrap gap-1 md:gap-7 justify-center items-center">
-        {profiles.map((profile, index) => (
-          <div
-            key={index}
+    <div className="profilelist-container "> {/* Force white background */}
+      <div className="flex flex-wrap gap-1 md:gap-7 justify-center items-center
+      md:grid md:grid-cols-4 px-8 max-w-[1440px] mx-auto
+      ">
+        {profiles.map((profile, index) => 
+        {
+          
+          return (
+            <div
+              key={index}
             className="w-full md:max-w-xs md:mb-6 cursor-pointer"
             onClick={() => handleProfileClick(profile)} // When card is clicked
           >
@@ -109,19 +115,20 @@ const ProfileList: React.FC = () => {
               isSelected={selectedProfile?.name === profile.name}
             />
           </div>
-        ))}
+        )
+      })}
       </div>
 
       {/* Blog Navigation Section with ref for scrolling */}
-      <div className="hidden w-full md:block" ref={blogNavRef}>
+      <div className="hidden w-full md:block" ref={isMobile ? null : blogNavRef}>
         <Blog_Page_Navigation
-          image={selectedProfile ? selectedProfile.image : cardData}
+          image={selectedProfile ? selectedProfile.image : cardData1}
           resetTrigger={resetTrigger}
         />
       </div>
 
       {/* Mobile View */}
-      <div className="w-full" ref={blogNavRef}>
+      <div className="w-full" ref={isMobile ? blogNavRef : null}>
         <div className="md:hidden flex flex-col w-full">
           {profiles.map((profile) => (
             <Mobile_View

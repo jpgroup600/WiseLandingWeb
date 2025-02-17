@@ -33,11 +33,11 @@ export default function Home() {
         </a>
       </div>
       {/* This is where your popup is rendered */}
-      <div className="hidden md:block"><InsurancePopup /> </div>
+      {/* <div className="hidden md:block"><InsurancePopup /> </div> */}
 
 
       {/* <CardContainer/> */}
-      <div className="hidden md:block">  <FormComponent />
+      <div className="hidden md:block mt-32">  <FormComponent />
 
       </div>
 

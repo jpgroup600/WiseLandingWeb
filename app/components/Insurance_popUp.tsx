@@ -25,15 +25,8 @@ export default function InsurancePopup(): JSX.Element | null {
         animate={{ x: 0 }}
         exit={{ x: 300 }}
         transition={{ delay: 0.5 }}
-        className="fixed right-0 bottom-36 w-[250px] p-0 bg-white shadow-lg border rounded-lg"
+        className="fixed right-0 bottom-36 w-[250px] p-0 bg-[#8435C6] shadow-lg border rounded-lg"
       >
-        <Image
-          src="/float.png"
-          alt="Logo"
-          width={400}
-          height={400}
-          className="absolute"
-        />
 
         <div className="relative mt-20 mb-5 w-[80%] mx-auto">
           <input type="text" className="w-full p-3 border rounded" placeholder="이름입력" />

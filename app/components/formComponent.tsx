@@ -26,13 +26,13 @@ const FormComponent = () => {
 
     return (
         <div className="  items-center w-full h-full  flex flex-col">
-            <div className="flex flex-col w-[1100px] h-[230px] justify-center items-center mx-auto  rounded-2xl bg-[#150f96] ">
+            <div className="flex flex-col w-[1200px] h-[230px] justify-center items-center mx-auto  rounded-2xl bg-[#8435C6] ">
                 {/* Form Inner Section */}
-                <div className="bg-white p-5 flex justify-items-center gap-3 w-[95%] h-[50%] ">
+                <div className="bg-white p-5 flex justify-center gap-3 w-[95%] h-[50%] ">
                     {/* Name Input */}
                     <div className="flex items-center">
                         <label htmlFor="name" className="text-black font-extrabold">
-                            이름:
+                            회사명:
                         </label>
                         <input
                             id="name"
@@ -40,30 +40,17 @@ const FormComponent = () => {
                             value={name}
                             onChange={(e) => setName(e.target.value)}
                             placeholder="이름"
-                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none "
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none 
+                            placeholder:pl-2
+                            "
                         />
                     </div>
 
-                    {/* Gender Selection */}
-                    <div className="flex items-center w-[100px] h-[50px] mt-3 justify-center bg-white border-2 border-[#150f96] rounded-lg">
-                        <button
-                            onClick={() => handleGenderSelect('male')}
-                            className={`w-full h-full ${gender === 'male' ? 'bg-[#150f96] text-white' : 'bg-white text-[#150f96]'} rounded-l-lg`}
-                        >
-                            남
-                        </button>
-                        <button
-                            onClick={() => handleGenderSelect('female')}
-                            className={`w-full h-full ${gender === 'female' ? 'bg-[#150f96] text-white' : 'bg-white text-[#150f96]'} rounded-r-lg`}
-                        >
-                            여
-                        </button>
-                    </div>
 
                     {/* Birthday Input */}
                     <div className="flex items-center">
                         <label htmlFor="Birthday" className="text-black font-extrabold">
-                            생년월일:
+                            담당자명:
                         </label>
                         <input
                             type="text"
@@ -72,14 +59,33 @@ const FormComponent = () => {
                             onChange={handleBirthdayChange}
                             maxLength={6}
                             placeholder="예) 800101"
-                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none"
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
+                            placeholder:pl-2"
+                        />
+                    </div>
+
+                    {/* Birthday Input */}
+                    <div className="flex items-center">
+                        <label htmlFor="Birthday" className="text-black font-extrabold">
+                            직급:
+                        </label>
+                        <input
+                            type="text"
+                            id="Birthday"
+                            value={birthday}
+                            onChange={handleBirthdayChange}
+                            maxLength={6}
+                            placeholder="예) 800101"
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
+                            placeholder:pl-2
+                            "
                         />
                     </div>
 
                     {/* Phone Input */}
                     <div className="flex  items-center">
                         <label htmlFor="Phone" className="text-black ml-3 font-extrabold">
-                            핸드폰:
+                            연락처:
                         </label>
                         
                         <input
@@ -89,7 +95,9 @@ const FormComponent = () => {
                             onChange={handlePhoneChange}
                             maxLength={11}
                             placeholder="(-없이 입력)"
-                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-blue-500 focus:outline-none"
+                            className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
+                            placeholder:pl-2
+                            "
                         />
                     </div>
                 </div>
@@ -97,26 +105,21 @@ const FormComponent = () => {
                 {/* Buttons Section */}
                 <div className="flex justify-center  w-full  gap-2  mt-3">
                     <button
-                        className="w-[35%] bg-gray-600  text-[18px]  text-white font-extrabold py-3  rounded-lg"
+                        className="w-[95%] bg-yellow-400 text-[18px] text-black font-extrabold py-3 rounded-lg"
                     >
-                        상담신청
-                    </button>
-                    <button
-                        className="w-[60%] bg-yellow-400 text-[18px] text-black font-extrabold py-3 rounded-lg"
-                    >
-                        보험료 계산
+                        광고 현황 조회 
                     </button>
                 </div>
             </div>
-            <div className="flex items-center justify-center gap-3 mt-6 text-[#150f96]">
-                <span className="font-semibold text-[30px] mr-2">보험가입상담</span>
-                <span className='text-[45px] rounded-full'>
+            <div className="flex items-center justify-center gap-3 mt-6 text-black">
+                <span className="font-[900] text-[30px] mr-2 school-font">내 광고 클릭한번에 조회하기</span>
+                <span className='text-[45px] rounded-full text-[#8435C6]'>
                 <FaSquarePhone />
 
                 </span>
-                <a href="tel:080-410-4100" className="flex items-center">
+                <a href="tel:01031142998" className="flex items-center">
                   
-                    <span className="text-[35px] font-extrabold">080-410-4100</span>
+                    <span className="text-[35px] font-extrabold text-[#8435C6]">010-3114-2998</span>
                 </a>
             </div>
 

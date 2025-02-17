@@ -88,135 +88,20 @@ export default function Navbar() {
   };
 
   return (
-    <div className="relative school-font">
-      <div className="w-full h-[30px] text-[#999] text-[10px] flex md:justify-end items-center gap-2 border-b border-gray-300 px-4 font-medium cursor-pointer">
-        <div>고객센터│ </div>
-        <div>공시실│ </div>
-        <div>홈페이지</div>
+    <div className="bg-white w-full border-b border-gray-200 shadow-md h-[110px] max-w-[1440px] px-[5%] flex flex-row justify-between items-center">
+      <div className="logo-wrapper flex flex-row gap-2">
+        <Image src="/Navbar/logo.png" alt="logo" width={100} height={100} />
+        
       </div>
-      {/* Desktop Navbar */}
-      <div className="w-full h-[70px] md:h-[100px] flex justify-between items-center px-4 md:px-24 bg-white shadow-sm">
-        {/* Logo with hover dropdown (desktop only) */}
-        <div
-          className="md:h-[40px] h-[30px] w-[150px] md:w-[300px]"
-          onMouseEnter={handleDesktopHover}
-        >
-          <Image
-            src="/Navbar/logo.png"
-            alt="Logo"
-            width={400}
-            height={400}
-            className="w-full h-full"
-          />
-        </div>
-
-        {/* Desktop Menu Items */}
-        <div className="hidden md:flex gap-8 font-bold school-font text-xl relative">
-          {Object.keys(menuData).map((item) => (
-            <div
-              key={item}
-              className="flex items-center cursor-pointer py-2 px-4 hover:text-[#150f96] transition-colors"
-              onMouseEnter={handleDesktopHover}
-            >
-              {menuData[item].title}
+      <div className="phone-wrapper">
+        <a href="tel:01041142998">
+          <div className="phone-container flex flex-row items-center gap-2">
+            <FaSquarePhone className="text-black text-[40px]" />
+            <span className="text-black text-[30px] font-[700]">010-4114-2998</span>
             </div>
-          ))}
-        </div>
-
-        {/* Desktop Phone with hover dropdown (desktop only) */}
-        <div
-          className="hidden md:flex items-center font-bold gap-2"
-          onMouseEnter={handleDesktopHover}
-        >
-          <FaSquarePhone className="text-3xl text-[#150f96]" />
-          <div className="text-2xl text-[#150f96]">080-410-4100</div>
-        </div>
-
-        {/* Mobile Icons */}
-        <div className="flex md:hidden gap-4">
-          <button className="bg-[#150f96] w-[98px] h-[34px] rounded-full flex items-center justify-center gap-1">
-            <FaSquarePhone className="text-white" />
-            <span className="text-white school-font text-sm">helpline</span>
-          </button>
-          <HiOutlineBars3
-            size={30}
-            onClick={() => setMobileMenuOpen(true)}
-            className="cursor-pointer"
-          />
-        </div>
+        </a>
       </div>
 
-      {/* Desktop Dropdown */}
-      {showDropdown && (
-        <div
-          className="absolute top-full left-0 w-full bg-white shadow-lg z-50"
-          onMouseEnter={handleDesktopHover}
-          onMouseLeave={() => setShowDropdown(false)}
-        >
-          <div className="grid items-center px-80 grid-cols-4 gap-8 p-6 border-t-2 border-blue-100">
-            {Object.entries(menuData).map(([key, value]) => (
-              <div key={key} className="space-y-4 border-r border-[#d6cbc9]">
-                <div className="flex gap-2 items-center">
-                  <div>{value.icon}</div>
-                  <h3 className="text-xl font-bold text-[#150f96]">
-                    {value.title}
-                  </h3>
-                </div>
-                <ul className="space-y-2">
-                  {value.content.map((service, index) => (
-                    <li key={index} className="text-gray-600 hover:text-blue-800">
-                      {service}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {/* Mobile Sidebar */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50">
-          <div className="w-full h-screen bg-white flex">
-            {/* Left Side - Categories */}
-            <div className="w-1/2 bg-gray-50 border-r p-4 overflow-y-auto">
-              <div className="flex justify-between items-center mb-6">
-                <HiX
-                  size={24}
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    setSelectedMobileMenu(null);
-                  }}
-                  className="cursor-pointer text-gray-600"
-                />
-              </div>
-
-              <div className="space-y-3">
-                {Object.keys(menuData).map((key) => (
-                  <button
-                    key={key}
-                    onClick={() => setSelectedMobileMenu(key)}
-                    className={`w-full text-left p-3 rounded-lg ${
-                      selectedMobileMenu === key
-                        ? "bg-blue-100 text-blue-900"
-                        : "hover:bg-gray-100"
-                    }`}
-                  >
-                    <div className="flex items-center text-[12px] justify-center">
-                      <div>{menuData[key].icon}</div>
-                      {menuData[key].title}
-                    </div>
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Right Side - Content */}
-            <div className="w-2/3 overflow-y-auto">{renderMobileContent()}</div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
