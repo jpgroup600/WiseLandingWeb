@@ -97,7 +97,7 @@ export default function Header() {
 
       {/* Form Section */}
       <div className="hidden md:block md:w-[40%]">
-        <div className="h-[75vh] flex">
+        <div className="h-[600px] flex">
           <div className=" rounded-3xl bg-[#8435C6] flex flex-col items-center w-[100%]">
             <div className="h-[50px] px-4 mt-8 mb-10">
               <div className="form-heading-wrapper h-[100%] flex items-center justify-center">
