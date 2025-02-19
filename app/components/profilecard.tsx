@@ -60,7 +60,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             isSelected ? "border-[#150f96] " : "border-gray-200"
           } transition-all`}>
           <button className=" justify-center items-center md:items-center flex w-full md:text-[28.5px] h-[10px] font-semibold text-white md:h-[60px]" >
-            <span className='noto-sans-kr text-center'>보장 확인</span>
+            <span className='noto-sans-kr text-center'>알아보기</span>
           </button>
           <HiChevronDown className="text-[35px] text-black  md:hidden  " />
  

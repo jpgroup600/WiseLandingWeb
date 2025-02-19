@@ -32,7 +32,7 @@ export default function Related_Product(prop: RealtedTypes) {
                 <h1 className="md:font-[900] font-semibold text-[#8435C6] md:text-[30px] text-[15px] nexonNormal-font"
                 dangerouslySetInnerHTML={{ __html: card.title }}
                 ></h1>
-                <p className="text-slate-900 font-medium md:font-semibold text-[13px] md:text-[25px]"
+                <p className="text-slate-900 font-medium md:font-semibold text-[13px] md:text-[22px] nexonNormal-font"
                 dangerouslySetInnerHTML={{ __html: card.description }}
                 ></p>
               </div>

@@ -3,7 +3,8 @@ import { useState, useRef, useEffect } from "react";
 import ProfileCard from "../profilecard";
 import Blog_Page_Navigation from "../blog_page_navigation";
 import Mobile_View from "../mobileview";
-import { cardData1, cardData2, cardData3, cardData4 } from "./data"
+import { cardData, qnaData, portData } from "./data"
+import { PortDataInterface, CardDataInterface, QnaDataInterface } from "@/app/constants/default";
 
 
 
@@ -13,8 +14,11 @@ interface Profile {
   description: string;
   imageUrl: string;
   additionalInfo: string;
-  image: { title: string; description: string; icon: string; }[];
+  image: CardDataInterface[];
   id: number;
+  qna: QnaDataInterface[];
+  port: PortDataInterface[]; 
+  
 }
 
 
@@ -41,7 +45,9 @@ const ProfileList: React.FC = () => {
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 치료가 자주 필요하고 보험 가입을 고려하고 있습니다.",
-      image:cardData1,
+      image:cardData.data1,
+      qna:qnaData.data1,
+      port:portData.data1,
     },
     {
       id: 2,
@@ -51,7 +57,9 @@ const ProfileList: React.FC = () => {
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 시간과 비용을 절감할 방법을 찾고 있습니다.",
-      image:cardData2,
+      image:cardData.data2,
+      qna:qnaData.data2,
+      port:portData.data2,
     },
     {
       id: 3,
@@ -61,7 +69,9 @@ const ProfileList: React.FC = () => {
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
-      image:cardData3,
+      image:cardData.data3,
+      qna:qnaData.data3,
+      port:portData.data3,
     },
     {
       id: 4,
@@ -71,7 +81,9 @@ const ProfileList: React.FC = () => {
       imageUrl: "/images/d2.png",
       additionalInfo:
         "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
-      image:cardData4,
+      image:cardData.data4,
+      qna:qnaData.data4,
+      port:portData.data4,
     },
   ];
 
@@ -122,7 +134,9 @@ const ProfileList: React.FC = () => {
       {/* Blog Navigation Section with ref for scrolling */}
       <div className="hidden w-full md:block" ref={isMobile ? null : blogNavRef}>
         <Blog_Page_Navigation
-          image={selectedProfile ? selectedProfile.image : cardData1}
+          image={selectedProfile ? selectedProfile.image : cardData.data1}
+          port={selectedProfile ? selectedProfile.port : portData.data1}
+          qna={selectedProfile ? selectedProfile.qna : qnaData.data1}
           resetTrigger={resetTrigger}
         />
       </div>

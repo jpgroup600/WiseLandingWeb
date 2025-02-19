@@ -1,16 +1,19 @@
 "use client";
 import React, { useState, useEffect,useRef } from "react";
 import Related_Product from "./related_product";
-import DentalInsurance from "./blog_detail2";
-import Blog_Review from "./blog_review";
-
+import DentalInsurance from "./portfolio/blog_detail2";
+import Qna_Page from "./qna_page";
+import { PortDataInterface, CardDataInterface, QnaDataInterface } from "@/app/constants/default";
 
 interface BlogPageNavigationProps {
-  image: { title: string; description: string; icon: string; }[];
+  image: CardDataInterface[];
   resetTrigger: number; // a counter that increments on each profile click
+  qna: QnaDataInterface[];
+  port: PortDataInterface[];
+
 }
 
-export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNavigationProps) {
+export default function Blog_Page_Navigation({ image, resetTrigger,qna,port }: BlogPageNavigationProps) {
   const [activePage, setActivePage] = useState("related-products");
   const navBarRef = useRef<HTMLDivElement>(null);
 
@@ -25,10 +28,10 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
       return <Related_Product product_dat={image} />;
     }
     if (activePage === "details") {
-      return <DentalInsurance />;
+      return <DentalInsurance port={port} />;
     }
     if (activePage === "reviews") {
-      return <Blog_Review />;
+      return <Qna_Page qna={qna} />;
     }
     return null;
   };
@@ -41,7 +44,7 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
       >
         <button
           onClick={() => setActivePage("related-products")}
-          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border border-black ${activePage === "related-products"
+          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border border-[#8435C6] ${activePage === "related-products"
               ? "bg-white text-[#8435C6] border-b-8 md:border-b-8 border-[#8435C6]"
               : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
@@ -50,7 +53,7 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
         </button>
         <button
           onClick={() => setActivePage("details")}
-          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border  border-black ${activePage === "details"
+          className={`w-[123px] md:w-[366px] h-[50px] md:h-[70px] md:border  border-[#8435C6] ${activePage === "details"
               ? "bg-white text-[#8435C6] border-b-8 md:border-b-8 border-[#8435C6]"
               : "bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
@@ -59,7 +62,7 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
         </button>
         <button
           onClick={() => setActivePage("reviews")}
-          className={`w-[123px]  md:w-[366px] h-[50px] md:h-[70px] md:border border-black ${activePage === "reviews"
+          className={`w-[123px]  md:w-[366px] h-[50px] md:h-[70px] md:border border-[#8435C6] ${activePage === "reviews"
               ? "bg-white text-[#8435C6] border-b-8 md:border-b-8 border-[#8435C6]"
               :"bg-white text-[#8f8f8f] border-b-2 border-[#8f8f8f]"
             }`}
@@ -69,7 +72,7 @@ export default function Blog_Page_Navigation({ image, resetTrigger }: BlogPageNa
       </div>
 
       {/* Render the content dynamically */}
-      <div className="mt-8 max-w-[1440px] mx-auto">{renderContent()}</div>
+      <div className="mt-8 max-w-[1440px] mx-auto w-[80%]">{renderContent()}</div>
     </div>
   );
 }
