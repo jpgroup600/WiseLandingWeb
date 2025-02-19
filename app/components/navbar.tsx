@@ -86,18 +86,20 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-white w-full border-b border-gray-200 shadow-md h-[110px] max-w-[1440px] px-[5%] flex flex-row justify-between items-center">
-      <div className="logo-wrapper flex flex-row gap-2">
-        <Image src="/Navbar/logo.png" alt="logo" width={100} height={100} />
-        
-      </div>
-      <div className="phone-wrapper">
-        <a href="tel:01041142998">
-          <div className="phone-container flex flex-row items-center gap-2">
-            <FaSquarePhone className="text-black text-[40px]" />
-            <span className="text-black text-[30px] font-[700]">010-4114-2998</span>
+    <div className="bg-white w-full border-b border-gray-200 shadow-md h-[110px] px-[5%]">
+      <div className="nav-wrapper flex flex-row gap-2 justify-between items-center max-w-[1440px] mx-auto">
+        <div className="logo-wrapper flex flex-row gap-2">
+          <Image src="/Navbar/logo.png" alt="logo" width={100} height={100} />
+
+        </div>
+        <div className="phone-wrapper">
+          <a href="tel:01041142998">
+            <div className="phone-container flex flex-row items-center gap-2">
+              <FaSquarePhone className="text-black text-[40px]" />
+              <span className="text-black text-[30px] font-[700]">010-4114-2998</span>
             </div>
-        </a>
+          </a>
+        </div>
       </div>
 
     </div>
