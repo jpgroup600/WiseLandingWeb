@@ -47,7 +47,7 @@ const Header = () => {
       {/* Text and Image */}
       <div className=" md:h-[750px] py-4">
         <div className="md:w-[700px] sm:w-[750px] w-full h-full ">
-          <div className="md:text-[40px] md:mt-[0px] school-font font-extrabold mt-[10px] text-black text-center">
+          <div className="md:text-[40px] tracking-[1px] md:mt-[0px] school-font font-extrabold mt-[10px] text-black text-center">
             <p>
               <span className="text-[#9B00FF] md:text-[50px] text-[7vw]">성공적인</span>
               <span className="text-black md:text-[50px] text-[7vw]"> 사업을 위해서는
