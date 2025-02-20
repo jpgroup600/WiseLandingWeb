@@ -43,20 +43,11 @@ export default function Model_Handel() {
       {/* Fixed Buttons */}
       <div className="fixed bottom-0 left-0 right-0 bg-white border-t shadow-lg p-2 z-50">
         <div className="flex items-center justify-center  gap-3">
-          <div>
-            <FloatingButton />
-          </div>
           <button
             onClick={() => openModel(2)}
-            className=" h-[50px] w-[160px] bg-[#FFD400] text-black school-font font-extrabold text-[15px] rounded-xl"
+            className=" h-[50px] w-full bg-[#FFD400] text-black school-font font-extrabold text-[15px] rounded-xl"
           >
-            가입 상담 신청{" "}
-          </button>
-          <button
-            onClick={() => openModel(3)}
-            className="h-[50px] w-[160px]  bg-[#FFD400]  school-font font-extrabold text-[15px] text-black rounded-xl"
-          >
-            보험료 확인{" "}
+            내 광고 조회하기{" "}
           </button>
         </div>
       </div>

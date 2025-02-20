@@ -91,6 +91,7 @@ const ProfileList: React.FC = () => {
   const handleProfileClick = (profile: Profile) => {
     setSelectedProfile(profile);
     setResetTrigger((prev) => prev + 1);
+    console.log(profile);
   };
 
   // Scroll into view when a new profile is selected
@@ -135,7 +136,6 @@ const ProfileList: React.FC = () => {
       <div className="hidden w-full md:block" ref={isMobile ? null : blogNavRef}>
         <Blog_Page_Navigation
           image={selectedProfile ? selectedProfile.image : cardData.data1}
-          port={selectedProfile ? selectedProfile.port : portData.data1}
           qna={selectedProfile ? selectedProfile.qna : qnaData.data1}
           resetTrigger={resetTrigger}
         />
@@ -144,14 +144,17 @@ const ProfileList: React.FC = () => {
       {/* Mobile View */}
       <div className="w-full" ref={isMobile ? blogNavRef : null}>
         <div className="md:hidden flex flex-col w-full">
-          {profiles.map((profile) => (
+          {profiles.map((profile,index) => (
+            
             <Mobile_View
+              qna={profile.qna}
               key={profile.id}
               image={profile.image}
               resetTrigger={resetTrigger}
               name={profile.name}
               isOpen={selectedProfile?.id === profile.id} // Check if this profile is selected
             />
+            
           ))}
         </div>
       </div>

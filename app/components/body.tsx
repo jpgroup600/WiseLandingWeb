@@ -1,4 +1,5 @@
 import ProfileList from "./profile_list/profile_list";
+import DentalInsurance from "./portfolio/blog_detail2";
 
 export default function Body() {
   return (
@@ -17,6 +18,19 @@ export default function Body() {
       {/* Profile Cards Section */}
       <div className="w-full">
         <ProfileList />
+      </div>
+
+      <div className="w-full flex items-center  md:mt-24 justify-center my- md:my-12">
+        <div className="w-full md:w-[100%] bg-[#f2f2f2] py-4  "> 
+          <h1 className="text-xl md:text-3xl font-bold text-black text-center nexonReg-font">
+            기존에 작업한게 있나요?
+          </h1>
+        </div>
+      </div>
+
+      {/* new component */}
+      <div className="w-full">
+        
       </div>
 
     </div>

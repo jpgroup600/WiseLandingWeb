@@ -1,4 +1,4 @@
-import Header from "./components/header";
+import Header from "./components/header/header";
 import Navbar from "./components/navbar";
 import Footer from "./components/footer";
 import Body from "./components/body";
@@ -20,6 +20,10 @@ export default function Home() {
 
       {/* Body */}
       <div><Body /></div>
+
+
+
+
       <div className="flex px-2  bg-gray-400 items-center md:hidden justify-center gap-3 text-[12px] text-[#150f96]">
         <span className="font-semibold text-[20px] mr-2">보험가입상담</span>
         <span className='text-[25px] rounded-full'>

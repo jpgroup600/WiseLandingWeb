@@ -1,44 +1,63 @@
 "use client";
+import { useState,useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules"; // Correct import
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-
+import "./custom.css";
 import Image from "next/image";
-import Header_Form from "./header_form";
+import Header_Form from "../header_form";
 
 // Data for swiper slides
 const swiperData = [
   {
     text1: "<strong>첫번째</strong> 마케팅,개발,디자이너,MD <br />  따로 찾을 필요없는<br />  올인원 솔루션을 제공합니다",
     image: "/lungs.png",
+    mb_text: "첫번째 마케팅,개발,<br>디자이너,MD  따로 찾을 <br>필요없는 올인원 솔루션을 <br> 제공합니다"
   },
   {
 
     text1: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다",
     image: "/head.png",
+    mb_text: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다"
   },
   {
     text1: "세번째 대행사가 아닌 <br />  내 회사를 같이 키울 파트너 <br />  (밤에도 쉬지않고 일합니다 )",
     image: "/teeth.png",
+    mb_text: "세번째 대행사가 아닌 <br> 내 회사를 같이 키울 <br> 밤에도 쉬지않고 일하는 <br> 파트너 "
   },
   {
     text1: "네번쨰 마케팅과 개발의 <br />  통합 솔루션, 불편함을 <br />  자동화로 해결합니다",
     image: "/teeth.png",
+    mb_text: "네번쨰 마케팅과 개발의 <br />  통합 솔루션, 불편함을 <br />  자동화로 해결합니다"
   }
   // Add more data as needed
 ];
 
 export default function Header() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    window.innerWidth < 768 ? setIsMobile(true) : setIsMobile(false);
+  }, []);
+
   return (
     <div className="max-w-[1440px] mx-auto h-auto flex flex-col md:flex-row md:mt-10 justify-between px-[5%]">
       {/* Text and Image */}
       <div className=" md:h-[750px] py-4">
         <div className="md:w-[700px] sm:w-[750px] w-full h-full ">
-          <div className="md:text-[40px] school-font font-extrabold  text-black text-center">
-            <p ><span className="text-[#9B00FF] text-[50px]">성공적인</span><span className="text-black text-[50px]"> 사업을 위해서는</span></p>
-            <p className="text-[25px] md:text-[50px]">성공적인 파트너가 있어야합니다!</p>
+          <div className="md:text-[40px] md:mt-[0px] 
+          school-font font-extrabold mt-[10px] text-black text-center">
+            <p >
+              <span className="text-[#9B00FF] md:text-[50px] text-[35px]">성공적인</span>
+              <span className="text-black md:text-[50px] text-[35px]"> 사업을 위해서는</span>
+            </p>
+            <p className="md:text-[50px] text-[35px]">{isMobile ? (
+              <p>성공적인 파트너가<br />있어야합니다!</p>
+            ) : (
+              <p>성공적인 파트너가 있어야합니다!</p>
+            )}</p>
             <p className="text-[20px]  nexonReg-font text-[#3a3d53] text-center
           md:text-center md:text-[2rem]
           ">나에게 맞는 팀은 있을까?</p>
@@ -47,7 +66,7 @@ export default function Header() {
 
 
           <div className="top3-border-wrapper mt-5 px-3 flex flex-col ">
-            <div className="top3-border-title school-font text-[#3a3d53] text-[1.5rem] font-[800] ">
+            <div className="top3-border-title school-font text-[#3a3d53] md:text-[1.5rem] text-[1rem] font-[800] ">
               와루는 어떤 회사인가요?
             </div>
             <Swiper
@@ -68,10 +87,11 @@ export default function Header() {
             >
               {swiperData.map((data, index) => (
                 <SwiperSlide key={index}>
-                  <div className="top3-border  flex h-[200px] md:h-[300px] md:px-[10%] items-center justify-center md:w-full bg-[#C6A6CD50] rounded-[10px]">
+                  <div className="top3-border  flex h-[150px] md:h-[300px] px-[10%] items-center justify-center md:w-full bg-[#C6A6CD50] rounded-[10px]">
                     <div className="flex flex-col w-3/4">
-                      <p className="nexonReg-font text-black text-[10px]  md:text-[1.5rem] space-y-4 font-[900]"
-                        dangerouslySetInnerHTML={{ __html: data.text1 }}
+                      <p className="nexonReg-font text-black text-[0.8rem]  md:text-[1.5rem] space-y-4 font-[900]"
+                        dangerouslySetInnerHTML={{ __html: isMobile ? data.mb_text : data.text1 }}
+
                       >
                       </p>
                     </div>
@@ -89,7 +109,7 @@ export default function Header() {
               ))}
             </Swiper>
 
-            <div className="custom-pagination flex justify-center mt-2 space-x-2" />
+            <div className="custom-pagination flex justify-center mt-2 space-x-2 sm:mb-8" />
 
           </div>
         </div>

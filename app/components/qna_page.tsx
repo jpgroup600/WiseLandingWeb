@@ -19,7 +19,8 @@ function Qna_Page({ qna }: { qna: Qna[] }) {
               onClick={() => setOpenIndex(openIndex === index ? null : index)}
               className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50"
             >
-              <span className="text-lg font-medium">{item.question}</span>
+              <span className="text-sm font-bold pr-[5px] 
+              md:text-lg">{item.question}</span>
               <svg
                 className={`w-6 h-6 transition-transform duration-200 ${
                   openIndex === index ? 'rotate-180' : ''
@@ -43,7 +44,7 @@ function Qna_Page({ qna }: { qna: Qna[] }) {
               }`}
             >
               <div className="px-6 py-4 bg-gray-50">
-                <p className="text-gray-700 "
+                <p className="text-gray-700 text-[14px] md:text-lg "
                 dangerouslySetInnerHTML={{ __html: item.answer }}
                 ></p>
               </div>
