@@ -35,7 +35,7 @@ const swiperData = [
   // Add more data as needed
 ];
 
-export default function Header() {
+const Header = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -47,23 +47,22 @@ export default function Header() {
       {/* Text and Image */}
       <div className=" md:h-[750px] py-4">
         <div className="md:w-[700px] sm:w-[750px] w-full h-full ">
-          <div className="md:text-[40px] md:mt-[0px] 
-          school-font font-extrabold mt-[10px] text-black text-center">
-            <p >
+          <div className="md:text-[40px] md:mt-[0px] school-font font-extrabold mt-[10px] text-black text-center">
+            <p>
               <span className="text-[#9B00FF] md:text-[50px] text-[35px]">성공적인</span>
               <span className="text-black md:text-[50px] text-[35px]"> 사업을 위해서는</span>
             </p>
-            <p className="md:text-[50px] text-[35px]">{isMobile ? (
-              <p>성공적인 파트너가<br />있어야합니다!</p>
-            ) : (
-              <p>성공적인 파트너가 있어야합니다!</p>
-            )}</p>
-            <p className="text-[20px]  nexonReg-font text-[#3a3d53] text-center
-          md:text-center md:text-[2rem]
-          ">나에게 맞는 팀은 있을까?</p>
-
+            <div className="md:text-[50px] text-[35px]">
+              {isMobile ? (
+                <p>성공적인 파트너가<br />있어야합니다!</p>
+              ) : (
+                <p>성공적인 파트너가 있어야합니다!</p>
+              )}
+            </div>
+            <p className="text-[20px] nexonReg-font text-[#3a3d53] text-center md:text-center md:text-[2rem]">
+              나에게 맞는 팀은 있을까?
+            </p>
           </div>
-
 
           <div className="top3-border-wrapper mt-5 px-3 flex flex-col ">
             <div className="top3-border-title school-font text-[#3a3d53] md:text-[1.5rem] text-[1rem] font-[800] ">
@@ -136,3 +135,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;
