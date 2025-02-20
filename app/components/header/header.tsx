@@ -49,16 +49,19 @@ const Header = () => {
         <div className="md:w-[700px] sm:w-[750px] w-full h-full ">
           <div className="md:text-[40px] md:mt-[0px] school-font font-extrabold mt-[10px] text-black text-center">
             <p>
-              <span className="text-[#9B00FF] md:text-[50px] text-[35px]">성공적인</span>
-              <span className="text-black md:text-[50px] text-[35px]"> 사업을 위해서는</span>
+              <span className="text-[#9B00FF] md:text-[50px] text-[7vw]">성공적인</span>
+              <span className="text-black md:text-[50px] text-[7vw]"> 사업을 위해서는
+
+
+              </span>
             </p>
-            <div className="md:text-[50px] text-[35px]">
+            <span className="md:text-[50px] text-[7vw]">
               {isMobile ? (
                 <p>성공적인 파트너가<br />있어야합니다!</p>
               ) : (
                 <p>성공적인 파트너가 있어야합니다!</p>
               )}
-            </div>
+            </span>
             <p className="text-[20px] nexonReg-font text-[#3a3d53] text-center md:text-center md:text-[2rem]">
               나에게 맞는 팀은 있을까?
             </p>
@@ -88,7 +91,7 @@ const Header = () => {
                 <SwiperSlide key={index}>
                   <div className="top3-border  flex h-[150px] md:h-[300px] px-[10%] items-center justify-center md:w-full bg-[#C6A6CD50] rounded-[10px]">
                     <div className="flex flex-col w-3/4">
-                      <p className="nexonReg-font text-black text-[0.8rem]  md:text-[1.5rem] space-y-4 font-[900]"
+                      <p className="nexonReg-font text-black text-[2.8vw]  md:text-[1.5rem] space-y-4 font-[900]"
                         dangerouslySetInnerHTML={{ __html: isMobile ? data.mb_text : data.text1 }}
 
                       >
