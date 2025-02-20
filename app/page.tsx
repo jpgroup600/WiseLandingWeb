@@ -24,15 +24,15 @@ export default function Home() {
 
 
 
-      <div className="flex px-2  bg-gray-400 items-center md:hidden justify-center gap-3 text-[12px] text-[#150f96]">
+      <div className="flex px-2 mt-20 bg-[#f2f2f2] py-4 items-center md:hidden justify-center gap-3 text-[12px] text-black">
         <span className="font-semibold text-[20px] mr-2">전화상담</span>
         <span className='text-[25px] rounded-full'>
           <FaSquarePhone />
 
         </span>
-        <a href="tel:080-410-4100" className="flex items-center">
+        <a href="tel:01041142998" className="flex items-center">
 
-          <span className="text-[15px] font-extrabold">080-410-4100</span>
+          <span className="text-[18px] font-extrabold">010-4114-2998</span>
         </a>
       </div>
       {/* This is where your popup is rendered */}
