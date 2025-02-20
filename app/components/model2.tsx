@@ -24,7 +24,11 @@ export default function Model2(props: Model2Props) {
       <div className="w-full h-auto flex flex-col gap-4 rounded-3xl px-8">
         {/* text and close icon */}
         <div className="flex justify-between mt-4 ">
-          <div className="font-extrabold text-[16px]">클릭한번으로 내 광고 점검 받기</div>
+          <div className="font-extrabold text-[16px]">
+            <p className="text-[18px] md:text-[20px]">클릭한번으로 내 광고 점검 받기</p>
+            <p className="text-[20px] md:text-[20px] font-[900]">현재 신청인원 <span className="text-[#8435C6]">36</span>명</p>
+
+          </div>
           {/* close button */}
           <div>
             <button onClick={props.onClose} // Close button handler
@@ -38,7 +42,8 @@ export default function Model2(props: Model2Props) {
         <div className="flex flex-col gap-3">
           <input
             type="text"
-            className="w-full p-3 border rounded-xl border-gray-200"
+            className="w-full p-3 border rounded-xl border-gray-200
+            "
             placeholder="회사명"
             required
           />
