@@ -24,7 +24,7 @@ export default function Model2(props: Model2Props) {
       <div className="w-full h-auto flex flex-col gap-4 rounded-3xl px-8">
         {/* text and close icon */}
         <div className="flex justify-between mt-4 ">
-          <div className="font-extrabold text-[16px]">클릭한번으로 내 광고 조회하기</div>
+          <div className="font-extrabold text-[16px]">클릭한번으로 내 광고 점검 받기</div>
           {/* close button */}
           <div>
             <button onClick={props.onClose} // Close button handler
@@ -67,7 +67,7 @@ export default function Model2(props: Model2Props) {
         {/* submit buttons 2 */}
         <div className="w-full flex justify-between mt-2">
           <button className="w-[100%] p-3 bg-yellow-300 font-bold text-lg rounded-xl" onClick={handleExistingCustomer}>
-            가입 상담 신청
+            광고 점검받기
           </button>
         </div>
         {/* call button and icon link */}

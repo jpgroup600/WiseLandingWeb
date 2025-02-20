@@ -1,5 +1,6 @@
 import ProfileList from "./profile_list/profile_list";
 import DentalInsurance from "./portfolio/blog_detail2";
+import Portfolio from "./portfolio/portfolio";
 
 export default function Body() {
   return (
@@ -30,7 +31,7 @@ export default function Body() {
 
       {/* new component */}
       <div className="w-full">
-        
+        <Portfolio />
       </div>
 
     </div>

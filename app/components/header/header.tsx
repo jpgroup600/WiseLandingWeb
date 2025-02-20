@@ -123,7 +123,7 @@ const Header = () => {
           <div className=" rounded-3xl bg-[#8435C6] flex flex-col items-center w-[100%]">
             <div className="h-[50px] px-4 mt-8 mb-10">
               <div className="form-heading-wrapper h-[100%] flex items-center justify-center">
-                <div className="form-heading text-[30px] text-white text-center font-[900] school-font">클릭한번으로 <br></br>내 광고 조회하기</div>
+                <div className="form-heading text-[30px] text-white text-center font-[900] school-font">클릭한번으로 <br></br>내 광고 점검받기</div>
               </div>
             </div>
             <div className=" h-full w-[90%]">

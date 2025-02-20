@@ -96,12 +96,14 @@ export default function Navbar() {
         </div>
         <div className="phone-wrapper">
           <a href="tel:01041142998">
-            <div className="phone-container flex flex-row items-center gap-2">
-              <FaSquarePhone className="text-black text-[22px] md:text-[40px]" />
-              <span className="text-black text-[22px] font-[700] md:text-[40px]">010-4114-2998</span>
+            <div className="phone-container flex justify-center flex-row items-center gap-2 bg-[#8435C6]  h-[35px] w-[120px] rounded-full
+            
+            ">
+              <FaSquarePhone className="text-white text-[22px] md:text-[40px]" />
+              <span className="text-white font-[700]">전화상담</span>
             </div>
           </a>
-        </div>
+        </div>  
       </div>
 
     </div>

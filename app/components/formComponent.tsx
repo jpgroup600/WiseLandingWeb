@@ -107,7 +107,7 @@ const FormComponent = () => {
                 </div>
             </div>
             <div className="flex items-center justify-center gap-3 mt-6 text-black">
-                <span className="font-[900] text-[30px] mr-2 school-font">내 광고 클릭한번에 조회하기</span>
+                <span className="font-[900] text-[30px] mr-2 school-font">내 광고 클릭한번에 점검받기</span>
                 <span className='text-[45px] rounded-full text-[#8435C6]'>
                 <FaSquarePhone />
 

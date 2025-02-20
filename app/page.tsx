@@ -25,7 +25,7 @@ export default function Home() {
 
 
       <div className="flex px-2  bg-gray-400 items-center md:hidden justify-center gap-3 text-[12px] text-[#150f96]">
-        <span className="font-semibold text-[20px] mr-2">보험가입상담</span>
+        <span className="font-semibold text-[20px] mr-2">전화상담</span>
         <span className='text-[25px] rounded-full'>
           <FaSquarePhone />
 

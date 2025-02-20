@@ -47,7 +47,7 @@ export default function Model_Handel() {
             onClick={() => openModel(2)}
             className=" h-[50px] w-full bg-[#FFD400] text-black school-font font-extrabold text-[15px] rounded-xl"
           >
-            내 광고 조회하기{" "}
+            내 광고 점검받기{" "}
           </button>
         </div>
       </div>

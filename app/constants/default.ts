@@ -27,8 +27,9 @@ export interface CardDataInterface {
     description: string;
     src: string;
     link: string | null;
-    type: "video" | "image";
+    type: "video" | "image" | "youtube";
   }
+
 
 
   
