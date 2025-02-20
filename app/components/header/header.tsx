@@ -62,7 +62,7 @@ const Header = () => {
                 <p>성공적인 파트너가 있어야합니다!</p>
               )}
             </span>
-            <p className="text-[20px] nexonReg-font text-[#3a3d53] text-center md:text-center md:text-[2rem]">
+            <p className="text-[20px] mt-[10px] nexonReg-font text-[#3a3d53] text-center md:text-center md:text-[2rem]">
               나에게 맞는 팀은 있을까?
             </p>
           </div>
