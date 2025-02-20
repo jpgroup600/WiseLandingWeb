@@ -111,7 +111,7 @@ const Header = () => {
               ))}
             </Swiper>
 
-            <div className="custom-pagination flex justify-center mt-2 space-x-2 sm:mb-8" />
+            <div className="custom-pagination flex justify-center mt-2 space-x-2 mb-8 md:mb-0" />
 
           </div>
         </div>
