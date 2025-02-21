@@ -19,7 +19,7 @@ export default function Related_Product(prop: RealtedTypes) {
           // prop.product_dat.length % 2 === 0 ? setEven(true) : setEven(false);
           return (
             <div key={index} className="w-full md:w-[480px] h-[130px] md:h-[350px] flex items-center gap-4 justify-center rounded-2xl text-white border-[2px] border-[#e5e7eb]">
-              <div className='image-wrapper w-[75px] h-[75px] md:w-[130px] md:h-[130px]'
+              <div className='image-wrapper w-[20vw] h-[20vw] md:w-[130px] md:h-[130px]'
               >
                 <Image src={card.icon} alt={card.title} width={100} height={100} className='w-full h-full' />
 
