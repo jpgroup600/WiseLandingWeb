@@ -12,20 +12,20 @@ export default function Related_Product(prop: RealtedTypes) {
   // const products = prop.product_data || []; // Default to empty array if no data is passed
 
   return (
-    <div className="flex flex-col w-full h-full px-4  gap-2  mb-2 items-center justify-center">
+    <div className="flex flex-col w-full h-full px-4  gap-4  mb-2 items-center justify-center">
       {/* Card Group 1 */}
       <div className="flex flex-wrap gap-2 md:gap-6 justify-center">
         {prop.product_dat.map((card, index) => {
           // prop.product_dat.length % 2 === 0 ? setEven(true) : setEven(false);
           return (
-            <div key={index} className="w-full md:w-[480px] h-[130px] md:h-[350px] flex items-center gap-4 justify-center rounded-2xl text-white border-[2px] border-[#e5e7eb]">
+            <div key={index} className=" px-4 w-full md:w-[480px] h-[130px] md:h-[350px] flex items-center gap-4 justify-between rounded-2xl text-white border-[2px] border-[#e5e7eb]">
               <div className='image-wrapper w-[20vw] h-[20vw] md:w-[130px] md:h-[130px]'
               >
                 <Image src={card.icon} alt={card.title} width={100} height={100} className='w-full h-full' />
 
               </div>
 
-              <div className='px-4 text-wrapper w-[250px] h-[250px] md:w-[300px] flex flex-col items-start justify-center'>
+              <div className=' text-wrapper w-[250px] h-[250px] pr-4 md:w-[300px] flex flex-col items-start justify-center'>
                 <h1 className="md:font-[900] font-semibold text-[#8435C6] md:text-[30px] text-[15px] nexonNormal-font"
                   dangerouslySetInnerHTML={{ __html: card.title }}
                 ></h1>
