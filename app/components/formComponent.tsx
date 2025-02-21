@@ -2,22 +2,37 @@
 
 import { useState } from 'react';
 import { FaSquarePhone } from "react-icons/fa6";
-
+import { SubmitFormsInterface } from '@/app/constants/default';
 
 const FormComponent = () => {
-    const [name, setName] = useState('');
-    const [birthday, setBirthday] = useState('');
-    const [phone, setPhone] = useState('');
-
-    const handleBirthdayChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value.replace(/\D/g, '').slice(0, 6);
-        setBirthday(value);
-    };
-
-    const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const value = e.target.value.replace(/\D/g, '').slice(0, 11);
-        setPhone(value);
-    };
+    const [userForm, setUserForm] = useState<SubmitFormsInterface>({
+        companyName: "",
+        userName: "",
+        rank: "",
+        phone: "",
+      });
+    const [register, setRegister] = useState(false);
+    
+      const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setUserForm({ ...userForm, [name]: value });
+      };
+    
+      const handleSubmit = async () => {
+        const response = await fetch("/api/addLead", {
+          method: "POST",
+          body: JSON.stringify(userForm),
+        });
+        console.log(response);
+    
+        if(response.status === 200){
+          alert("상담 신청이 완료되었습니다");
+          setRegister(true);
+        }else{
+          alert("상담 신청에 실패했습니다. 다시 시도해주세요.");
+        }
+    
+      };
 
     return (
         <div className="  items-center w-full h-full  flex flex-col">
@@ -32,8 +47,9 @@ const FormComponent = () => {
                         <input
                             id="name"
                             type="text"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            name="companyName"
+                            value={userForm.companyName}
+                            onChange={handleChange}
                             placeholder="이름"
                             className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none 
                             placeholder:pl-2
@@ -49,9 +65,10 @@ const FormComponent = () => {
                         </label>
                         <input
                             type="text"
+                            name="userName"
                             id="Birthday"
-                            value={birthday}
-                            onChange={handleBirthdayChange}
+                            value={userForm.userName}
+                            onChange={handleChange}
                             maxLength={6}
                             placeholder="예) 800101"
                             className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
@@ -66,9 +83,10 @@ const FormComponent = () => {
                         </label>
                         <input
                             type="text"
+                            name="rank"
                             id="Birthday"
-                            value={birthday}
-                            onChange={handleBirthdayChange}
+                            value={userForm.rank}
+                            onChange={handleChange}
                             maxLength={6}
                             placeholder="예) 800101"
                             className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
@@ -86,8 +104,9 @@ const FormComponent = () => {
                         <input
                             type="text"
                             id="Phone"
-                            value={phone}
-                            onChange={handlePhoneChange}
+                            name="phone"
+                            value={userForm.phone}
+                            onChange={handleChange}
                             maxLength={11}
                             placeholder="(-없이 입력)"
                             className=" border-b-2 pb-2 mt-2 text-gray-700 focus:border-[#9B00FF] focus:outline-none
@@ -100,9 +119,11 @@ const FormComponent = () => {
                 {/* Buttons Section */}
                 <div className="flex justify-center  w-full  gap-2  mt-3">
                     <button
+                        onClick={handleSubmit}
+                        disabled={register}
                         className="w-[95%] bg-yellow-400 text-[18px] text-black font-extrabold py-3 rounded-lg"
                     >
-                        광고 현황 조회 
+                        광고 점검 받기 
                     </button>
                 </div>
             </div>
