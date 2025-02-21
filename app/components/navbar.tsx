@@ -86,7 +86,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="bg-white w-full border-b border-gray-200 shadow-md md:px-[5%] py-[10px] px-[30px]
+    <div className="bg-white w-full border-b border-gray-200 shadow-md md:px-[5%] md:py-[5px] py-[10px] px-[30px]
     md:h-[110px]
     ">
       <div className="nav-wrapper flex flex-row gap-2 justify-between items-center max-w-[1440px] mx-auto">
@@ -94,7 +94,7 @@ export default function Navbar() {
           <Image src="/Navbar/logo.png" alt="logo" width={100} height={100} />
 
         </div>
-        <div className="phone-wrapper">
+        <div className="phone-wrapper h-full flex items-center">
           <a href="tel:01041142998">
             <div className="phone-container flex justify-center flex-row items-center gap-2 bg-[#8435C6]  h-[35px] w-[120px] rounded-full
             md:w-[150px] md:h-[50px]

@@ -13,25 +13,20 @@ import Header_Form from "../header_form";
 const swiperData = [
   {
     text1: "<strong>첫번째</strong> 마케팅,개발,디자이너,MD <br />  따로 찾을 필요없는<br />  올인원 솔루션을 제공합니다",
-    image: "/lungs.png",
+    image: "/header/1.jpg",
     mb_text: "첫번째 마케팅,개발,<br>디자이너,MD  따로 찾을 <br>필요없는 올인원 솔루션을 <br> 제공합니다"
   },
   {
 
     text1: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다",
-    image: "/head.png",
+    image: "/header/2.jpg",
     mb_text: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다"
   },
   {
     text1: "세번째 대행사가 아닌 <br />  내 회사를 같이 키울 파트너 <br />  (밤에도 쉬지않고 일합니다 )",
-    image: "/teeth.png",
+    image: "/header/3.jpg",
     mb_text: "세번째 대행사가 아닌 <br> 내 회사를 같이 키울 <br> 밤에도 쉬지않고 일하는 <br> 파트너 "
   },
-  {
-    text1: "네번쨰 마케팅과 개발의 <br />  통합 솔루션, 불편함을 <br />  자동화로 해결합니다",
-    image: "/teeth.png",
-    mb_text: "네번쨰 마케팅과 개발의 <br />  통합 솔루션, 불편함을 <br />  자동화로 해결합니다"
-  }
   // Add more data as needed
 ];
 
@@ -89,23 +84,10 @@ const Header = () => {
             >
               {swiperData.map((data, index) => (
                 <SwiperSlide key={index}>
-                  <div className="top3-border  flex h-[150px] md:h-[300px] px-[10%] items-center justify-center md:w-full bg-[#C6A6CD50] rounded-[10px]">
-                    <div className="flex flex-col w-3/4">
-                      <p className="nexonReg-font text-black text-[2.8vw]  md:text-[1.5rem] space-y-4 font-[900]"
-                        dangerouslySetInnerHTML={{ __html: isMobile ? data.mb_text : data.text1 }}
-
-                      >
-                      </p>
-                    </div>
-                    <div className="w-[150px] h-[150px] flex justify-center items-center ml-10">
-                      <Image
-                        src={data.image}
-                        width={150}
-                        height={150}
-                        alt="Slide image"
-                        priority
-                      />
-                    </div>
+                  <div className="top3-border  flex h-[150px] md:h-[300px] px-[10%] items-center justify-center md:w-full bg-[#C6A6CD50] rounded-[10px]"
+                  style={{backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center'}}
+                  >
+                    
                   </div>
                 </SwiperSlide>
               ))}
