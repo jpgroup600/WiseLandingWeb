@@ -35,7 +35,7 @@ const ProfileCard: React.FC<ProfileCardProps> = ({
             alt="Profile Picture"
             width={150}
             height={150}
-            className="rounded-full border-4 border-gray-200" // Light border
+            className="" // Light border
           />
           </div>
         </div>

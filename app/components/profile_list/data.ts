@@ -5,27 +5,27 @@ const cardData1 = [
     {
       title: "파워링크",
       description: "원하시는 상품을 네이버 상위에 노출되게 흥보해드리겠습니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/마케팅/파워링크.jpg", // Replace with actual image paths
     },
     {
       title: "카카오 광고",
       description: "대한민국 대표메신저, 여기에 당신의 상품을 판매할수있게 도와드립니다",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/마케팅/카카오톡_아이콘.jpg", // Replace with actual image paths
     },
     {
       title: "인스타그램 광고",
       description: "20~30대들을 위한 광고를 진행해 고객을 모집해드리겠습니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/마케팅/인스타그램광고.jpg", // Replace with actual image paths
     },
     {
       title: "유튜브 광고",
       description: "유튜브에 영상광고 및 유튜버 섭외를 통한 광고를 진행해드리겠습니다",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/마케팅/유튜브광고.jpg", // Replace with actual image paths
     },
     {
         title: "브랜딩 기획",
         description: "당신의 브랜드가 사랑받는 이유 저희가 만들어드리겠습니다",
-        icon: "/d4.PNG", // Replace with actual image paths
+        icon: "/products/마케팅/브랜드기획.jpg", // Replace with actual image paths
       },
   ];
   
@@ -33,27 +33,27 @@ const cardData1 = [
     {
       title: "프로그램 개발",
       description: "생각해둔 프로그램이 있으시면 제가 만들어드리겠습니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/개발/프로그램 개발.jpg", // Replace with actual image paths
     },
     {
       title: "앱 기획 및 개발",
       description: "플랫폼 서비스를 만들고 싶으신가요? 상세한 구상과 개발은 저에게 맡기세요",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/개발/앱 기획 및 개발.jpg", // Replace with actual image paths
     },
     {
       title: "관리 프로그램",
       description: "직원, 매출 , 업무 관리가 필요하신가요? 프로그램으로 해결하세요",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/개발/관리 프로그램.jpg", // Replace with actual image paths
     },
     {
       title: "브랜딩 페이지",
       description: "남들과 차별되는 사이트가 필요하신가요?",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/개발/브랜딩 페이지.jpg", // Replace with actual image paths
     },
     {
         title: "인공지능 개발",
         description: "직원을 대신하는 인공지능 자동화 서비스 전문입니다",
-        icon: "/d4.PNG", // Replace with actual image paths
+        icon: "/products/개발/인공지능 개발.jpg", // Replace with actual image paths
       },
   ];
   
@@ -61,22 +61,22 @@ const cardData1 = [
     {
       title: "제품 활영",
       description: "제품의 특징과 활용도를 돋보이게 촬영합니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/디자인&영상/제품촬영.jpg", // Replace with actual image paths
     },
     {
       title: "상세페이지 제작",
       description: "제품의 장점, 사용법을 한눈에 정리하고 구매 욕구를 자극하는 디자인을 만들어드립니다",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/디자인&영상/상세페이지 제작.jpg", // Replace with actual image paths
     },
     {
       title: "영상 제작",
       description: "제품이나 브랜드의 특성을 효과적으로 전달하는 영상을 제작합니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/디자인&영상/영상제작.jpg", // Replace with actual image paths
     },
     {
       title: "배너 제작",
       description: "광고나 프로모션을 효과적으로 알리기 위한 디자인을 제작합니다",
-      icon: "/d4.PNG", // Replace with actual image paths
+      icon: "/products/디자인&영상/배너제작.jpg", // Replace with actual image paths
     },
   ];
   
@@ -84,22 +84,22 @@ const cardData1 = [
     {
       title: "상품관리",
       description: "프로모션, 각종 온라인 쇼핑몰(아마존,쿠팡,네이버,유튜브 등) 행사 참여 및 입점",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/쇼핑몰운영/상품관리.jpg", // Replace with actual image paths
     },
     {
       title: "판매전략 기획",
       description: "어떤 플랫폼에서 잘팔리는지를 분석하고 판매전략을 기획합니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/쇼핑몰운영/판매전략 기획.jpg", // Replace with actual image paths
     },
     {
       title: "매출,재고 관리",
       description: "인기있는 제품과 아닌 제품을 분류하고 그게 맞는 상품 및 업무 배치를 합니다",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/쇼핑몰운영/매출,재고 관리.jpg", // Replace with actual image paths
     },
     {
       title: "실적 개선 프로젝트",
       description: "상품 기획, 운영, 마케팅, 채널·재고 관리, 협업, 매출 분석을 해드립니다 ",
-      icon: "/d2.PNG", // Replace with actual image paths
+      icon: "/products/쇼핑몰운영/실적 개선 프로젝트.jpg", // Replace with actual image paths
     },
     
 

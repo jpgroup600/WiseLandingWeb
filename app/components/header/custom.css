@@ -4,7 +4,9 @@
         height: 5px;
         
     }
-    span.swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background: #8435C6;
-    }
+    
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #8435C6;
 }

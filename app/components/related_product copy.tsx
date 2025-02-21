@@ -18,19 +18,22 @@ export default function Related_Product(prop: RealtedTypes) {
         {prop.product_dat.map((card, index) => {
           // prop.product_dat.length % 2 === 0 ? setEven(true) : setEven(false);
           return (
-            <div key={index} className="w-full md:w-[480px] h-[130px] md:h-[350px] flex items-center gap-4 justify-center rounded-2xl text-white border-[2px] border-[#e5e7eb]">
-              <div className='image-wrapper w-[75px] h-[75px] md:w-[130px] md:h-[130px]'
-              >
-                <Image src={card.icon} alt={card.title} width={100} height={100} className='w-full h-full' />
-
+            <div key={index} className="w-full sm:w-[480px] h-[130px] sm:h-[350px] flex items-center gap-4 rounded-2xl text-white border-[2px] border-[#e5e7eb]">
+              <div className="h-[100px] ml-5 w-[150px] md:h-[150px] md:w-[250px]">
+                <Image
+                  src={card.icon}
+                  alt={`icon-${index}`}
+                  width={100}
+                  height={100}
+                  className='h-full w-full'
+                />
               </div>
-
-              <div className='px-4 text-wrapper w-[250px] h-[250px] md:w-[300px] flex flex-col items-start justify-center'>
+              <div className="px-10 flex flex-col items-start">
                 <h1 className="md:font-[900] font-semibold text-[#8435C6] md:text-[30px] text-[15px] nexonNormal-font"
-                  dangerouslySetInnerHTML={{ __html: card.title }}
+                dangerouslySetInnerHTML={{ __html: card.title }}
                 ></h1>
                 <p className="text-slate-900 font-medium md:font-semibold text-[13px] md:text-[22px] nexonNormal-font"
-                  dangerouslySetInnerHTML={{ __html: card.description }}
+                dangerouslySetInnerHTML={{ __html: card.description }}
                 ></p>
               </div>
             </div>

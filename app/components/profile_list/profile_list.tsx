@@ -42,7 +42,7 @@ const ProfileList: React.FC = () => {
       age: "남, 43세",
       description:
         "상품은 준비가 됬는데 <br> 고객한테 어떻게 알릴지가 <br>고민입니다.",
-      imageUrl: "/images/d2.png",
+      imageUrl: "/images/marketing.jpg",
       additionalInfo:
         "이 사람은 치료가 자주 필요하고 보험 가입을 고려하고 있습니다.",
       image:cardData.data1,
@@ -54,7 +54,7 @@ const ProfileList: React.FC = () => {
       name: "개발",
       age: "여, 30세",
       description: "아이디어는 있는데 <br >어떻게 구현할지 <br> 아직 잘모르겠어요",
-      imageUrl: "/images/d2.png",
+      imageUrl: "/images/dev.jpg",
       additionalInfo:
         "이 사람은 시간과 비용을 절감할 방법을 찾고 있습니다.",
       image:cardData.data2,
@@ -66,7 +66,7 @@ const ProfileList: React.FC = () => {
       name: "디자인/영상",
       age: "남, 50세",
       description: "상품이 있는데 <br> 매력적이게 보이고 싶은데 <br> 어떻게 하면 좋을까요?",
-      imageUrl: "/images/d2.png",
+      imageUrl: "/images/design.jpg",
       additionalInfo:
         "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
       image:cardData.data3,
@@ -78,7 +78,7 @@ const ProfileList: React.FC = () => {
       name: "쇼핑몰 운영",
       age: "남, 50세",
       description: "쇼핑몰 운영중에 있는데 <br> 관리할 사람이 없어서 <br> 고민이에요",
-      imageUrl: "/images/d2.png",
+      imageUrl: "/images/shop.jpg",
       additionalInfo:
         "이 사람은 장기적인 치료비에 대비한 보험을 찾고 있습니다.",
       image:cardData.data4,
