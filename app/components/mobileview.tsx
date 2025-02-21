@@ -23,6 +23,7 @@ export default function Mobile_View({
   const toggleModal = () => setLocalIsOpen(!localIsOpen);
 
   useEffect(() => {
+    
     setLocalIsOpen(isOpen);
   }, [isOpen]);
 
