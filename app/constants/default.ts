@@ -30,6 +30,14 @@ export interface CardDataInterface {
     type: "video" | "image" | "youtube";
   }
 
+  export interface SubmitFormsInterface {
+
+    companyName: string;
+    userName : string;
+    rank : string;
+    phone : string;
+  }
+
 
 
   
