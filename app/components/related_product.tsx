@@ -25,7 +25,7 @@ export default function Related_Product(prop: RealtedTypes) {
 
               </div>
 
-              <div className=' text-wrapper w-[250px] h-[250px] pl-4 md:w-[300px] flex flex-col items-start justify-center'>
+              <div className=' text-wrapper w-[200px] h-[250px] pl-2 md:w-[300px] flex flex-col items-start justify-center'>
                 <h1 className="md:font-[900] font-semibold text-[#8435C6] md:text-[30px] text-[15px] nexonNormal-font"
                   dangerouslySetInnerHTML={{ __html: card.title }}
                 ></h1>
