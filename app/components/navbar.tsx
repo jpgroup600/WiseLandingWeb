@@ -95,7 +95,7 @@ export default function Navbar() {
 
         </div>
         <div className="phone-wrapper h-full flex items-center">
-          <a href="tel:01041142998">
+          <a href="tel:01031142998">
             <div className="phone-container flex justify-center flex-row items-center gap-2 bg-[#8435C6]  h-[35px] w-[120px] rounded-full
             md:w-[150px] md:h-[50px]
             

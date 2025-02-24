@@ -30,9 +30,9 @@ export default function Home() {
           <FaSquarePhone />
 
         </span>
-        <a href="tel:01041142998" className="flex items-center">
+        <a href="tel:01031142998" className="flex items-center">
 
-          <span className="text-[18px] font-extrabold">010-4114-2998</span>
+          <span className="text-[18px] font-extrabold">010-3114-2998</span>
         </a>
       </div>
       {/* This is where your popup is rendered */}
