@@ -39,7 +39,7 @@ const ProfileList: React.FC = () => {
     {
       id: 1,
       name: "마케팅",
-      age: "남, 43세",
+      age: "여, 43세",
       description:
         "상품은 준비가 됬는데 <br> 고객한테 어떻게 알릴지가 <br>고민입니다.",
       imageUrl: "/images/marketing.jpg",
@@ -52,7 +52,7 @@ const ProfileList: React.FC = () => {
     {
       id: 2,
       name: "개발",
-      age: "여, 30세",
+      age: "남, 30세",
       description: "아이디어는 있는데 <br >어떻게 구현할지 <br> 아직 잘모르겠어요",
       imageUrl: "/images/dev.jpg",
       additionalInfo:
@@ -76,7 +76,7 @@ const ProfileList: React.FC = () => {
     {
       id: 4,
       name: "쇼핑몰 운영",
-      age: "남, 50세",
+      age: "여, 36세",
       description: "쇼핑몰 운영중에 있는데 <br> 관리할 사람이 없어서 <br> 고민이에요",
       imageUrl: "/images/shop.jpg",
       additionalInfo:
