@@ -34,6 +34,7 @@ export async function GET(request: NextRequest) {
         return new NextResponse(response.Body as unknown as ReadableStream, {
             headers: {
                 'Content-Type': response.ContentType || 'application/octet-stream',
+                
             },
         });
     } catch (error) {

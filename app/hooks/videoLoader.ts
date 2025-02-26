@@ -12,15 +12,14 @@ export const useVideoLoader = (data: VideoItem[]) => {
     const loadVideos = async () => {
         setLoading(true);
 
-        // Only load videos that aren't already loaded
         await Promise.all(data
             .filter(item => item.type === 'video' && !videoUrls.has(item.src))
             .map(async (item) => {
                 try {
                     const response = await fetch(`/api/getVideo?file=${item.src}`, {
                         headers: {
-                            'Range': 'bytes=0-', // Stream the video
-                            'Cache-Control': 'max-age=3600' // Cache for 1 hour
+                            'Range': 'bytes=0-',
+                            'Cache-Control': 'max-age=3600'
                         }
                     });
                     if (!response.ok) return;

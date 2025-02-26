@@ -36,7 +36,6 @@ function webPortfolio() {
                         muted 
                         loop 
                         playsInline 
-                        preload="true"
                     />
                     <div className='absolute bottom-0 left-0 w-full h-full bg-black/40 text-white text-center max-md:rounded-lg'>
                         <div className='w-full h-full flex items-center font-[900] justify-center nexonReg-font text-xl md:text-2xl
