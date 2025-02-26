@@ -132,7 +132,7 @@ export const data: PortDataInterface[] = [
     {
         title: '이글루',
         description: '야나두 X 조정석',
-        src: '/portfolio/dev/igloo.mov',
+        src: '/portfolio/dev/igloo.mp4',
         link: null,
         type: 'video'
     },
@@ -142,3 +142,84 @@ export const data: PortDataInterface[] = [
     
 
 ];
+
+export const webData: PortDataInterface[] = [
+    {
+        title: '롯데캐슬 이스트폴',
+        description: '야나두 X 조정석',
+        src: '/portfolio/design/eastpole.webm',
+        link: 'https://lotte-castle-by-jaibs.netlify.app',
+        type: 'video'
+    },
+    {
+        title: 'astro gaming',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/astro.mov',
+        link: 'https://www.astrogaming.com/en-us/customize/astro-id-headset-customizer.html?collection=2',
+        type: 'video'
+    },
+    {
+        title: 'theshowroom',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/theshowroom.mov',
+        link: 'https://theshowroom.lvmh.com/',
+        type: 'video'
+    },
+    {
+        title: '타오타지마',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/taotajima.mp4',
+        link: 'https://taotajima.netlify.app',
+        type: 'video'
+    },
+    {
+        title: '클라우드 캐슬',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/castle.mov',
+        link: 'https://cloud-castle-by-jaibs.netlify.app',
+        type: 'video'
+    },
+    {
+        title: '도그 트레이닝',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/mobile1.mov',
+        link: 'https://play.google.com/store/apps/details?id=com.chinandcheeks.dogtrainer',
+        type: 'video'
+    },
+    {
+        title: 'Ring Custom',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/jwel.mov',
+        link: 'https://ring-customizer-by-jaibs.netlify.app/',
+        type: 'video'
+    },
+
+    {
+        title: 'Light is Time',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/Ani2.mov',
+        link: 'https://www.citizenwatch-global.com/lightistime/index.html',
+        type: 'video'
+    },
+    {
+        title: 'Roberta Camireno',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/robe.mov',
+        link: 'https://roberta-camireno-by-jaibs.netlify.app',
+        type: 'video'
+    },
+    {
+        title: 'S24',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/Wid3.mov',
+        link: 'https://www.hotspot3d.com/?cl=samsung-galaxy-s24-amber-yellow&cr=samsung-galaxy-s24-plus-onyx-black',
+        type: 'video'
+    },
+    {
+        title: 'Uber points',
+        description: '야나두 X 조정석',
+        src: '/portfolio/dev/uber.mov',
+        link: 'https://www.uberprints.com/studio',
+        type: 'video'
+    },
+]

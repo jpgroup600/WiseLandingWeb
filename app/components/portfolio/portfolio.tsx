@@ -1,12 +1,21 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { data } from './data';
+import { data, webData } from './data';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules"; // Correct import
+import { useVideoLoader } from '@/app/hooks/videoLoader';
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
 
 export default function Portfolio() {
     const [visibleItems, setVisibleItems] = useState(6);  // Initially show 6 items
     const itemsPerLoad = 3;  // Load 3 more items each time
+    const { videoUrls, loading } = useVideoLoader(data);
+    
+    
 
     const handleSeeMore = () => {
         setVisibleItems(prev => Math.min(prev + itemsPerLoad, data.length));
@@ -32,6 +41,7 @@ export default function Portfolio() {
                     muted
                     loop
                     playsInline
+                    preload="true"
                     onClick={(e) => handlePlayPause(e.currentTarget)}
                 />
                 {!isVideoPlaying && (
@@ -52,8 +62,10 @@ export default function Portfolio() {
     };
 
     const renderContent = (item: typeof data[0]) => {
+        let videoUrl:string | null;
         switch (item.type) {
             case 'image':
+                
                 return (
                     <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden relative group 
                     max-md:rounded-lg'>
@@ -67,9 +79,14 @@ export default function Portfolio() {
                     </div>
                 );
             case 'video':
-                return (
+                videoUrl = videoUrls.get(item.src) ?? null;
+                return videoUrl ? (
                     <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden relative group max-md:rounded-lg'>
-                        <VideoPlayer src={item.src} />
+                        <VideoPlayer src={videoUrl} />
+                    </div>
+                ) : (
+                    <div className='w-full h-[250px] md:h-[300px] bg-gray-300'>
+                        Loading...
                     </div>
                 );
             case 'youtube':
@@ -112,6 +129,10 @@ export default function Portfolio() {
                     더 볼 수 있나요?
                 </button>
             )}
+
+           
+
+            
         </div>
     );
 };
