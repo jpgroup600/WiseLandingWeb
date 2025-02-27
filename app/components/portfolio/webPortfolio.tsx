@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/autoplay";
 import Image from 'next/image';
 import { useVideoLoader } from '@/app/hooks/videoLoader';
-function webPortfolio() {
+function WebPortfolio() {
     const [isMobile, setIsMobile] = useState(false);
     const { videoUrls, loading } = useVideoLoader(webData);
     console.log(videoUrls);
@@ -73,4 +73,4 @@ function webPortfolio() {
     )
 }
 
-export default webPortfolio
+export default WebPortfolio;
