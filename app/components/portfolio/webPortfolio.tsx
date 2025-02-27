@@ -26,8 +26,7 @@ function WebPortfolio() {
     }, []);
 
     const renderContent = (item: typeof webData[0]) => {
-        let src = `http://videostorage.aqtmwxqks2-v1p3zeppv3ye.p.temp-site.link${item.src}`;
-        console.log(src);
+        const src = `http://videostorage.aqtmwxqks2-v1p3zeppv3ye.p.temp-site.link${item.src}`;
         return (
             <a href={item.link ?? ''} target='_blank' rel='noopener noreferrer'>
                 <div className='w-full h-[250px] md:h-[400px] relative max-md:rounded-lg'>
