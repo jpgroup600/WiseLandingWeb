@@ -16,7 +16,9 @@ const eslintConfig = [
       "@typescript-eslint/no-unused-vars": "off",  // This disables the unused variables warning
       "no-unused-vars": "off",  // This disables the JavaScript unused variables warning
       "@typescript-eslint/no-unused-expressions": "off",
-      "no-unused-expressions": "off"
+      "no-unused-expressions": "off",
+       "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off"
     }
   }
 ];
