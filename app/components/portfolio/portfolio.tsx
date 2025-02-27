@@ -10,10 +10,70 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
 
+const VideoPlayer = ({ src }: { src: string }) => {
+    const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+    const handlePlayPause = (videoElement: HTMLVideoElement) => {
+        if (isVideoPlaying) {
+            videoElement.pause();
+        } else {
+            videoElement.play();
+        }
+        setIsVideoPlaying(!isVideoPlaying);
+    };
+
+    return (
+        <>
+            <video
+                src={src}
+                className='w-full h-full object-cover'
+                muted
+                loop
+                playsInline
+                preload="true"
+                onClick={(e) => handlePlayPause(e.currentTarget)}
+            />
+            {!isVideoPlaying && (
+                <div
+                    className='absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer'
+                    onClick={(e) => {
+                        const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
+                        handlePlayPause(video);
+                    }}
+                >
+                    <div className='w-16 h-16 bg-[#ff0033] rounded-full flex items-center justify-center'>
+                        <div className='w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-white border-b-[12px] border-b-transparent ml-1'></div>
+                    </div>
+                </div>
+            )}
+        </>
+    );
+};
+
+// Create a separate component for video content
+const VideoContent = ({ item }: { item: typeof data[0] }) => {
+    const { videoUrls, loading } = useVideoLoader([{ src: item.src, type: 'video' }]);
+    const videoUrl = videoUrls.get(item.src) ?? null;
+
+    if (!videoUrl) {
+        return (
+            <div className='w-full h-[250px] md:h-[300px] bg-gray-300 flex items-center justify-center'>
+                Loading...
+            </div>
+        );
+    }
+
+    return (
+        <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden relative group max-md:rounded-lg'>
+            <VideoPlayer src={videoUrl} />
+        </div>
+    );
+};
+
 export default function Portfolio() {
     const [visibleItems, setVisibleItems] = useState(6);  // Initially show 6 items
     const itemsPerLoad = 3;  // Load 3 more items each time
-    const { videoUrls, loading } = useVideoLoader(data);
+    
     
     
 
@@ -21,48 +81,7 @@ export default function Portfolio() {
         setVisibleItems(prev => Math.min(prev + itemsPerLoad, data.length));
     };
 
-    const VideoPlayer = ({ src }: { src: string }) => {
-        const [isVideoPlaying, setIsVideoPlaying] = useState(false);
-
-        const handlePlayPause = (videoElement: HTMLVideoElement) => {
-            if (isVideoPlaying) {
-                videoElement.pause();
-            } else {
-                videoElement.play();
-            }
-            setIsVideoPlaying(!isVideoPlaying);
-        };
-
-        return (
-            <>
-                <video
-                    src={src}
-                    className='w-full h-full object-cover'
-                    muted
-                    loop
-                    playsInline
-                    preload="true"
-                    onClick={(e) => handlePlayPause(e.currentTarget)}
-                />
-                {!isVideoPlaying && (
-                    <div
-                        className='absolute inset-0 flex items-center justify-center bg-black/20 cursor-pointer'
-                        onClick={(e) => {
-                            const video = e.currentTarget.previousElementSibling as HTMLVideoElement;
-                            handlePlayPause(video);
-                        }}
-                    >
-                        <div className='w-16 h-16 bg-[#ff0033] rounded-full flex items-center justify-center'>
-                            <div className='w-0 h-0 border-t-[12px] border-t-transparent border-l-[20px] border-l-white border-b-[12px] border-b-transparent ml-1'></div>
-                        </div>
-                    </div>
-                )}
-            </>
-        );
-    };
-
     const renderContent = (item: typeof data[0]) => {
-        let videoUrl:string | null;
         switch (item.type) {
             case 'image':
                 
@@ -79,16 +98,7 @@ export default function Portfolio() {
                     </div>
                 );
             case 'video':
-                videoUrl = videoUrls.get(item.src) ?? null;
-                return videoUrl ? (
-                    <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden relative group max-md:rounded-lg'>
-                        <VideoPlayer src={videoUrl} />
-                    </div>
-                ) : (
-                    <div className='w-full h-[250px] md:h-[300px] bg-gray-300'>
-                        Loading...
-                    </div>
-                );
+                return <VideoContent item={item} />;
             case 'youtube':
                 return (
                     <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden max-md:rounded-lg'>

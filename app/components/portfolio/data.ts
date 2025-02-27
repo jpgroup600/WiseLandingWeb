@@ -147,7 +147,7 @@ export const webData: PortDataInterface[] = [
     {
         title: '롯데캐슬 이스트폴',
         description: '야나두 X 조정석',
-        src: '/portfolio/design/eastpole.webm',
+        src: `/portfolio/design/eastpole.webm`,
         link: 'https://lotte-castle-by-jaibs.netlify.app',
         type: 'video'
     },

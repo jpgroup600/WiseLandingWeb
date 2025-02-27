@@ -39,6 +39,7 @@ export const useVideoLoader = (data: VideoItem[]) => {
 
     useEffect(() => {
         loadVideos();
+        console.log(videoUrls);
 
         return () => {
             videoUrls.forEach(url => URL.revokeObjectURL(url));

@@ -10,8 +10,8 @@ import Image from 'next/image';
 import { useVideoLoader } from '@/app/hooks/videoLoader';
 function WebPortfolio() {
     const [isMobile, setIsMobile] = useState(false);
-    const { videoUrls, loading } = useVideoLoader(webData);
-    console.log(videoUrls);
+    // const { videoUrls, loading } = useVideoLoader(webData);
+    // console.log(videoUrls);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth < 768);
@@ -26,11 +26,13 @@ function WebPortfolio() {
     }, []);
 
     const renderContent = (item: typeof webData[0]) => {
+        let src = `http://videostorage.aqtmwxqks2-v1p3zeppv3ye.p.temp-site.link${item.src}`;
+        console.log(src);
         return (
             <a href={item.link ?? ''} target='_blank' rel='noopener noreferrer'>
                 <div className='w-full h-[250px] md:h-[400px] relative max-md:rounded-lg'>
                     <video 
-                        src={videoUrls.get(item.src) || undefined} 
+                        src={src} 
                         className='w-full h-full object-cover max-md:rounded-lg'
                         autoPlay 
                         muted 
