@@ -52,10 +52,10 @@ const VideoPlayer = ({ src }: { src: string }) => {
 
 // Create a separate component for video content
 const VideoContent = ({ item }: { item: typeof data[0] }) => {
-    const { videoUrls, loading } = useVideoLoader([{ src: item.src, type: 'video' }]);
-    const videoUrl = videoUrls.get(item.src) ?? null;
+    // const { videoUrls, loading } = useVideoLoader([{ src: item.src, type: 'video' }]);
+    // const videoUrl = videoUrls.get(item.src) ?? null;
 
-    if (!videoUrl) {
+    if (!item.src) {
         return (
             <div className='w-full h-[250px] md:h-[300px] bg-gray-300 flex items-center justify-center'>
                 Loading...
@@ -65,7 +65,7 @@ const VideoContent = ({ item }: { item: typeof data[0] }) => {
 
     return (
         <div className='w-full h-[250px] md:h-[300px] bg-gray-300 overflow-hidden relative group max-md:rounded-lg'>
-            <VideoPlayer src={videoUrl} />
+            <VideoPlayer src={item.src} />
         </div>
     );
 };
