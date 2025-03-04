@@ -13,13 +13,13 @@ import Header_Form from "../header_form";
 const swiperData = [
   {
     text1: "<strong>첫번째</strong> 마케팅,개발,디자이너,MD <br />  따로 찾을 필요없는<br />  올인원 솔루션을 제공합니다",
-    image: "/header/1.jpg",
+    image: "/header/1.jpeg",
     mb_text: "첫번째 마케팅,개발,<br>디자이너,MD  따로 찾을 <br>필요없는 올인원 솔루션을 <br> 제공합니다"
   },
   {
 
     text1: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다",
-    image: "/header/2.jpg",
+    image: "/header/2.jpeg",
     mb_text: "두번째 모든 팀원이 <br />  와루에서 활동하기 때문에 <br />  팀 협업이 쉬워집니다"
   },
   {
