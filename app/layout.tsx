@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     url: 'https://와루.com',
     siteName: 'WiseRootree',
     images: [{
-      url: '/preview.png',
+      url: '/preview.jpg',
       width: 1200,
       height: 627,
       alt: 'Site preview image',
